@@ -19,7 +19,7 @@
 		3DE599DA260D22B600220450 /* AmbilightCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C1260D22B600220450 /* AmbilightCreator.swift */; };
 		3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */; };
 		3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */; };
-		3DE599DD260D22B600220450 /* SatisfactionCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */; };
+		3DE599DD260D22B600220450 /* SaturationCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C5260D22B600220450 /* SaturationCorrection.swift */; };
 		3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C6260D22B600220450 /* ColorCorrection.swift */; };
 		3DE599DF260D22B600220450 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C8260D22B600220450 /* ImageSource.swift */; };
 		3DE599E0260D22B600220450 /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C9260D22B600220450 /* ScreenCapture.swift */; };
@@ -89,7 +89,7 @@
 		3DE599C1260D22B600220450 /* AmbilightCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightCreator.swift; sourceTree = "<group>"; };
 		3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelScaleCorrection.swift; sourceTree = "<group>"; };
 		3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
-		3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SatisfactionCorrection.swift; sourceTree = "<group>"; };
+		3DE599C5260D22B600220450 /* SaturationCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationCorrection.swift; sourceTree = "<group>"; };
 		3DE599C6260D22B600220450 /* ColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCorrection.swift; sourceTree = "<group>"; };
 		3DE599C8260D22B600220450 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
 		3DE599C9260D22B600220450 /* ScreenCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			children = (
 				3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */,
 				3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */,
-				3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */,
+				3DE599C5260D22B600220450 /* SaturationCorrection.swift */,
 				3DE599C6260D22B600220450 /* ColorCorrection.swift */,
 			);
 			path = ColorCorrection;
@@ -472,7 +472,7 @@
 				3DE59990260D223F00220450 /* ContentView.swift in Sources */,
 				3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */,
 				3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */,
-				3DE599DD260D22B600220450 /* SatisfactionCorrection.swift in Sources */,
+				3DE599DD260D22B600220450 /* SaturationCorrection.swift in Sources */,
 				3DE599F2260D22BE00220450 /* AmbientLightingPreview.swift in Sources */,
 				3DE599DF260D22B600220450 /* ImageSource.swift in Sources */,
 				3DE599E1260D22B600220450 /* MatrixSplitterExamples.swift in Sources */,

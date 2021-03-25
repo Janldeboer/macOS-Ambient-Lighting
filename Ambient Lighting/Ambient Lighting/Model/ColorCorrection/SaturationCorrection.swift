@@ -1,5 +1,5 @@
 //
-//  SatisfactionCorrection.swift
+//  SaturationCorrection.swift
 //  Ambient Lighting
 //
 //  Created by Jan de Boer on 25.03.21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SatisfactionCorrection: ColorCorrection {
+struct SaturationCorrection: ColorCorrection {
     var gamma: CGFloat
     
     func correctColor(color: CGColor) -> CGColor {

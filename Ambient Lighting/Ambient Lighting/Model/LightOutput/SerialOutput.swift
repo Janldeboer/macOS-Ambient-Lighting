@@ -11,7 +11,7 @@ import SwiftUI
 
 
 
-class SerialOutput: NSObject, ORSSerialPortDelegate, AmbilightOutput {
+class SerialOutput: NSObject, ORSSerialPortDelegate, LightOutput {
     
     
     @objc let serialPortManager = ORSSerialPortManager.shared()

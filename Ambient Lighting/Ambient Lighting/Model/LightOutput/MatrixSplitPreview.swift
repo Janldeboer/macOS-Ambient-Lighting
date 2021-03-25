@@ -1,5 +1,5 @@
 //
-//  MatrixSplitAmbilightPreview.swift
+//  MatrixSplitPreview.swift
 //  Ambient Lighting
 //
 //  Created by Jan de Boer on 25.03.21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MatrixSplitAmbilightPreview: View, AmbilightOutput {
+struct MatrixSplitPreview: View, LightOutput {
     
     @Binding var colors: [CGColor]
     var config: MatrixSplitterConfiguration
@@ -49,8 +49,8 @@ struct MatrixSplitAmbilightPreview: View, AmbilightOutput {
     }
 }
 
-struct MatrixSplitAmbilightPreview_Previews: PreviewProvider {
+struct MatrixSplitPreview_Previews: PreviewProvider {
     static var previews: some View {
-        MatrixSplitAmbilightPreview(colors: .constant(Examples.simpleMatrixColors()), config: Examples.simpleMatrixSplitterConfig())
+        MatrixSplitPreview(colors: .constant(Examples.simpleMatrixColors()), config: Examples.simpleMatrixSplitterConfig())
     }
 }

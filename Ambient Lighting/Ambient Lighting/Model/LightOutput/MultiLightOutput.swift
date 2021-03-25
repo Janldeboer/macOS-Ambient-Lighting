@@ -1,5 +1,5 @@
 //
-//  MultiAmbilightOutput.swift
+//  MultiLightOutput.swift
 //  Ambient Lighting
 //
 //  Created by Jan de Boer on 25.03.21.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct MultiAmbilightOutput: AmbilightOutput {
+struct MultiLightOutput: LightOutput {
     
-    var outputs: [AmbilightOutput]
+    var outputs: [LightOutput]
     
     func outputColors(colors: [CGColor]) {
         for output in outputs {

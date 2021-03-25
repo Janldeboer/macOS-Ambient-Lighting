@@ -13,10 +13,10 @@
 		3DE59995260D224000220450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE59994260D224000220450 /* Preview Assets.xcassets */; };
 		3DE599A1260D224000220450 /* Ambient_LightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599A0260D224000220450 /* Ambient_LightingTests.swift */; };
 		3DE599AC260D224000220450 /* Ambient_LightingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599AB260D224000220450 /* Ambient_LightingUITests.swift */; };
-		3DE599D7260D22B600220450 /* MultiAmbilightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */; };
-		3DE599D8260D22B600220450 /* MatrixSplitAmbilightPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */; };
-		3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C0260D22B600220450 /* AmbilightOutput.swift */; };
-		3DE599DA260D22B600220450 /* AmbilightCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C1260D22B600220450 /* AmbilightCreator.swift */; };
+		3DE599D7260D22B600220450 /* MultiLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BE260D22B600220450 /* MultiLightOutput.swift */; };
+		3DE599D8260D22B600220450 /* MatrixSplitPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BF260D22B600220450 /* MatrixSplitPreview.swift */; };
+		3DE599D9260D22B600220450 /* LightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C0260D22B600220450 /* LightOutput.swift */; };
+		3DE599DA260D22B600220450 /* AmbientLightingCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C1260D22B600220450 /* AmbientLightingCreator.swift */; };
 		3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */; };
 		3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */; };
 		3DE599DD260D22B600220450 /* SaturationCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C5260D22B600220450 /* SaturationCorrection.swift */; };
@@ -83,10 +83,10 @@
 		3DE599A7260D224000220450 /* Ambient LightingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ambient LightingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE599AB260D224000220450 /* Ambient_LightingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingUITests.swift; sourceTree = "<group>"; };
 		3DE599AD260D224000220450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiAmbilightOutput.swift; sourceTree = "<group>"; };
-		3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitAmbilightPreview.swift; sourceTree = "<group>"; };
-		3DE599C0260D22B600220450 /* AmbilightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightOutput.swift; sourceTree = "<group>"; };
-		3DE599C1260D22B600220450 /* AmbilightCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightCreator.swift; sourceTree = "<group>"; };
+		3DE599BE260D22B600220450 /* MultiLightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLightOutput.swift; sourceTree = "<group>"; };
+		3DE599BF260D22B600220450 /* MatrixSplitPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitPreview.swift; sourceTree = "<group>"; };
+		3DE599C0260D22B600220450 /* LightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightOutput.swift; sourceTree = "<group>"; };
+		3DE599C1260D22B600220450 /* AmbientLightingCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbientLightingCreator.swift; sourceTree = "<group>"; };
 		3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelScaleCorrection.swift; sourceTree = "<group>"; };
 		3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
 		3DE599C5260D22B600220450 /* SaturationCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationCorrection.swift; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				3DE599D3260D22B600220450 /* Supportive Structs */,
-				3DE599C1260D22B600220450 /* AmbilightCreator.swift */,
-				3DE599BD260D22B600220450 /* AmbilightOutput */,
+				3DE599C1260D22B600220450 /* AmbientLightingCreator.swift */,
+				3DE599BD260D22B600220450 /* LightOutput */,
 				3DE599C2260D22B600220450 /* ColorCorrection */,
 				3DE599C7260D22B600220450 /* ImageSource */,
 				3DE599CA260D22B600220450 /* ImageSplitter */,
@@ -212,24 +212,24 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3DE599BD260D22B600220450 /* AmbilightOutput */ = {
+		3DE599BD260D22B600220450 /* LightOutput */ = {
 			isa = PBXGroup;
 			children = (
 				3DE599F1260D22BE00220450 /* SerialOutput.swift */,
-				3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */,
-				3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */,
-				3DE599C0260D22B600220450 /* AmbilightOutput.swift */,
+				3DE599BE260D22B600220450 /* MultiLightOutput.swift */,
+				3DE599BF260D22B600220450 /* MatrixSplitPreview.swift */,
+				3DE599C0260D22B600220450 /* LightOutput.swift */,
 			);
-			path = AmbilightOutput;
+			path = LightOutput;
 			sourceTree = "<group>";
 		};
 		3DE599C2260D22B600220450 /* ColorCorrection */ = {
 			isa = PBXGroup;
 			children = (
+				3DE599C6260D22B600220450 /* ColorCorrection.swift */,
 				3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */,
 				3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */,
 				3DE599C5260D22B600220450 /* SaturationCorrection.swift */,
-				3DE599C6260D22B600220450 /* ColorCorrection.swift */,
 			);
 			path = ColorCorrection;
 			sourceTree = "<group>";
@@ -461,23 +461,23 @@
 				3DE599E9260D22B600220450 /* Coord.swift in Sources */,
 				3DE599E3260D22B600220450 /* MatrixSpliiterConfiguration.swift in Sources */,
 				3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */,
-				3DE599DA260D22B600220450 /* AmbilightCreator.swift in Sources */,
+				3DE599DA260D22B600220450 /* AmbientLightingCreator.swift in Sources */,
 				3DE599E5260D22B600220450 /* ScalingReduction.swift in Sources */,
 				3DE599E7260D22B600220450 /* HSV.swift in Sources */,
 				3DE599E2260D22B600220450 /* MatrixSplitter.swift in Sources */,
 				3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */,
-				3DE599D8260D22B600220450 /* MatrixSplitAmbilightPreview.swift in Sources */,
+				3DE599D8260D22B600220450 /* MatrixSplitPreview.swift in Sources */,
 				3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */,
 				3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */,
 				3DE59990260D223F00220450 /* ContentView.swift in Sources */,
 				3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */,
-				3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */,
+				3DE599D9260D22B600220450 /* LightOutput.swift in Sources */,
 				3DE599DD260D22B600220450 /* SaturationCorrection.swift in Sources */,
 				3DE599F2260D22BE00220450 /* AmbientLightingPreview.swift in Sources */,
 				3DE599DF260D22B600220450 /* ImageSource.swift in Sources */,
 				3DE599E1260D22B600220450 /* MatrixSplitterExamples.swift in Sources */,
 				3DE599E8260D22B600220450 /* RGB.swift in Sources */,
-				3DE599D7260D22B600220450 /* MultiAmbilightOutput.swift in Sources */,
+				3DE599D7260D22B600220450 /* MultiLightOutput.swift in Sources */,
 				3DE599E0260D22B600220450 /* ScreenCapture.swift in Sources */,
 				3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */,
 				3DE599E6260D22B600220450 /* ImageReduction.swift in Sources */,

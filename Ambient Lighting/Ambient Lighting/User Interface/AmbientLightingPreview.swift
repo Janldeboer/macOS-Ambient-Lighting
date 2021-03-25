@@ -11,7 +11,9 @@ struct AmbientLightingPreview: View {
     
     let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
-    let matrixSplitterConfig = Examples.getBigMatrixSplitterConfig()
+    /// Change these to parametes to match your setup
+    let serialPortPath: String = "/dev/cu.usbmodem11301"
+    let matrixSplitterConfig: MatrixSplitterConfiguration = Examples.getBigMatrixSplitterConfig()
     
     let imageSource = ScreenCapture()
     let imageSplitter: MatrixSplitter

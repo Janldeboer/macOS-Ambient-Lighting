@@ -1,0 +1,809 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */; };
+		3DE59990260D223F00220450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998F260D223F00220450 /* ContentView.swift */; };
+		3DE59992260D224000220450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE59991260D224000220450 /* Assets.xcassets */; };
+		3DE59995260D224000220450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE59994260D224000220450 /* Preview Assets.xcassets */; };
+		3DE599A1260D224000220450 /* Ambient_LightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599A0260D224000220450 /* Ambient_LightingTests.swift */; };
+		3DE599AC260D224000220450 /* Ambient_LightingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599AB260D224000220450 /* Ambient_LightingUITests.swift */; };
+		3DE599D7260D22B600220450 /* MultiAmbilightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */; };
+		3DE599D8260D22B600220450 /* MatrixSplitAmbilightPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */; };
+		3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C0260D22B600220450 /* AmbilightOutput.swift */; };
+		3DE599DA260D22B600220450 /* AmbilightCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C1260D22B600220450 /* AmbilightCreator.swift */; };
+		3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */; };
+		3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */; };
+		3DE599DD260D22B600220450 /* SatisfactionCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */; };
+		3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C6260D22B600220450 /* ColorCorrection.swift */; };
+		3DE599DF260D22B600220450 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C8260D22B600220450 /* ImageSource.swift */; };
+		3DE599E0260D22B600220450 /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C9260D22B600220450 /* ScreenCapture.swift */; };
+		3DE599E1260D22B600220450 /* MatrixSplitterExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599CC260D22B600220450 /* MatrixSplitterExamples.swift */; };
+		3DE599E2260D22B600220450 /* MatrixSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599CD260D22B600220450 /* MatrixSplitter.swift */; };
+		3DE599E3260D22B600220450 /* MatrixSpliiterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599CE260D22B600220450 /* MatrixSpliiterConfiguration.swift */; };
+		3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599CF260D22B600220450 /* ImageSplitter.swift */; };
+		3DE599E5260D22B600220450 /* ScalingReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D1260D22B600220450 /* ScalingReduction.swift */; };
+		3DE599E6260D22B600220450 /* ImageReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D2260D22B600220450 /* ImageReduction.swift */; };
+		3DE599E7260D22B600220450 /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D4260D22B600220450 /* HSV.swift */; };
+		3DE599E8260D22B600220450 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D5260D22B600220450 /* RGB.swift */; };
+		3DE599E9260D22B600220450 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D6260D22B600220450 /* Coord.swift */; };
+		3DE599F2260D22BE00220450 /* AmbilightPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599EE260D22BD00220450 /* AmbilightPreview.swift */; };
+		3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599F1260D22BE00220450 /* SerialOutput.swift */; };
+		3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE59A10260D26B200220450 /* ORSSerial.framework */; };
+		3DE59A23260D277800220450 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A22260D277800220450 /* Examples.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE5999D260D224000220450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE59982260D223F00220450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE59989260D223F00220450;
+			remoteInfo = "Ambient Lighting";
+		};
+		3DE599A8260D224000220450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE59982260D223F00220450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE59989260D223F00220450;
+			remoteInfo = "Ambient Lighting";
+		};
+		3DE59A0F260D26B200220450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		3DE59A11260D26B200220450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DE5998A260D223F00220450 /* Ambient Lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambient Lighting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingApp.swift; sourceTree = "<group>"; };
+		3DE5998F260D223F00220450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3DE59991260D224000220450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DE59994260D224000220450 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DE59996260D224000220450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE59997260D224000220450 /* Ambient_Lighting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ambient_Lighting.entitlements; sourceTree = "<group>"; };
+		3DE5999C260D224000220450 /* Ambient LightingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ambient LightingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE599A0260D224000220450 /* Ambient_LightingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingTests.swift; sourceTree = "<group>"; };
+		3DE599A2260D224000220450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE599A7260D224000220450 /* Ambient LightingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ambient LightingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE599AB260D224000220450 /* Ambient_LightingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingUITests.swift; sourceTree = "<group>"; };
+		3DE599AD260D224000220450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiAmbilightOutput.swift; sourceTree = "<group>"; };
+		3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitAmbilightPreview.swift; sourceTree = "<group>"; };
+		3DE599C0260D22B600220450 /* AmbilightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightOutput.swift; sourceTree = "<group>"; };
+		3DE599C1260D22B600220450 /* AmbilightCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightCreator.swift; sourceTree = "<group>"; };
+		3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelScaleCorrection.swift; sourceTree = "<group>"; };
+		3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
+		3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SatisfactionCorrection.swift; sourceTree = "<group>"; };
+		3DE599C6260D22B600220450 /* ColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCorrection.swift; sourceTree = "<group>"; };
+		3DE599C8260D22B600220450 /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		3DE599C9260D22B600220450 /* ScreenCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
+		3DE599CC260D22B600220450 /* MatrixSplitterExamples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitterExamples.swift; sourceTree = "<group>"; };
+		3DE599CD260D22B600220450 /* MatrixSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitter.swift; sourceTree = "<group>"; };
+		3DE599CE260D22B600220450 /* MatrixSpliiterConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSpliiterConfiguration.swift; sourceTree = "<group>"; };
+		3DE599CF260D22B600220450 /* ImageSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSplitter.swift; sourceTree = "<group>"; };
+		3DE599D1260D22B600220450 /* ScalingReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalingReduction.swift; sourceTree = "<group>"; };
+		3DE599D2260D22B600220450 /* ImageReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReduction.swift; sourceTree = "<group>"; };
+		3DE599D4260D22B600220450 /* HSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSV.swift; sourceTree = "<group>"; };
+		3DE599D5260D22B600220450 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		3DE599D6260D22B600220450 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		3DE599EE260D22BD00220450 /* AmbilightPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightPreview.swift; sourceTree = "<group>"; };
+		3DE599F1260D22BE00220450 /* SerialOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOutput.swift; sourceTree = "<group>"; };
+		3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		3DE59A22260D277800220450 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE59987260D223F00220450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE59999260D224000220450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE599A4260D224000220450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE59981260D223F00220450 = {
+			isa = PBXGroup;
+			children = (
+				3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */,
+				3DE5998C260D223F00220450 /* Ambient Lighting */,
+				3DE5999F260D224000220450 /* Ambient LightingTests */,
+				3DE599AA260D224000220450 /* Ambient LightingUITests */,
+				3DE5998B260D223F00220450 /* Products */,
+				3DE59A18260D26DC00220450 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE5998B260D223F00220450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE5998A260D223F00220450 /* Ambient Lighting.app */,
+				3DE5999C260D224000220450 /* Ambient LightingTests.xctest */,
+				3DE599A7260D224000220450 /* Ambient LightingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE5998C260D223F00220450 /* Ambient Lighting */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599ED260D22BD00220450 /* User Interface */,
+				3DE599BC260D22B600220450 /* Model */,
+				3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */,
+				3DE5998F260D223F00220450 /* ContentView.swift */,
+				3DE59991260D224000220450 /* Assets.xcassets */,
+				3DE59A22260D277800220450 /* Examples.swift */,
+				3DE59996260D224000220450 /* Info.plist */,
+				3DE59997260D224000220450 /* Ambient_Lighting.entitlements */,
+				3DE59993260D224000220450 /* Preview Content */,
+			);
+			path = "Ambient Lighting";
+			sourceTree = "<group>";
+		};
+		3DE59993260D224000220450 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3DE59994260D224000220450 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3DE5999F260D224000220450 /* Ambient LightingTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599A0260D224000220450 /* Ambient_LightingTests.swift */,
+				3DE599A2260D224000220450 /* Info.plist */,
+			);
+			path = "Ambient LightingTests";
+			sourceTree = "<group>";
+		};
+		3DE599AA260D224000220450 /* Ambient LightingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599AB260D224000220450 /* Ambient_LightingUITests.swift */,
+				3DE599AD260D224000220450 /* Info.plist */,
+			);
+			path = "Ambient LightingUITests";
+			sourceTree = "<group>";
+		};
+		3DE599BC260D22B600220450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599D3260D22B600220450 /* Supportive Structs */,
+				3DE599C1260D22B600220450 /* AmbilightCreator.swift */,
+				3DE599BD260D22B600220450 /* AmbilightOutput */,
+				3DE599C2260D22B600220450 /* ColorCorrection */,
+				3DE599C7260D22B600220450 /* ImageSource */,
+				3DE599CA260D22B600220450 /* ImageSplitter */,
+				3DE599D0260D22B600220450 /* ImageReduction */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DE599BD260D22B600220450 /* AmbilightOutput */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599F1260D22BE00220450 /* SerialOutput.swift */,
+				3DE599BE260D22B600220450 /* MultiAmbilightOutput.swift */,
+				3DE599BF260D22B600220450 /* MatrixSplitAmbilightPreview.swift */,
+				3DE599C0260D22B600220450 /* AmbilightOutput.swift */,
+			);
+			path = AmbilightOutput;
+			sourceTree = "<group>";
+		};
+		3DE599C2260D22B600220450 /* ColorCorrection */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */,
+				3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */,
+				3DE599C5260D22B600220450 /* SatisfactionCorrection.swift */,
+				3DE599C6260D22B600220450 /* ColorCorrection.swift */,
+			);
+			path = ColorCorrection;
+			sourceTree = "<group>";
+		};
+		3DE599C7260D22B600220450 /* ImageSource */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599C8260D22B600220450 /* ImageSource.swift */,
+				3DE599C9260D22B600220450 /* ScreenCapture.swift */,
+			);
+			path = ImageSource;
+			sourceTree = "<group>";
+		};
+		3DE599CA260D22B600220450 /* ImageSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599CB260D22B600220450 /* MatrixSplitter */,
+				3DE599CF260D22B600220450 /* ImageSplitter.swift */,
+			);
+			path = ImageSplitter;
+			sourceTree = "<group>";
+		};
+		3DE599CB260D22B600220450 /* MatrixSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599CC260D22B600220450 /* MatrixSplitterExamples.swift */,
+				3DE599CD260D22B600220450 /* MatrixSplitter.swift */,
+				3DE599CE260D22B600220450 /* MatrixSpliiterConfiguration.swift */,
+			);
+			path = MatrixSplitter;
+			sourceTree = "<group>";
+		};
+		3DE599D0260D22B600220450 /* ImageReduction */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599D1260D22B600220450 /* ScalingReduction.swift */,
+				3DE599D2260D22B600220450 /* ImageReduction.swift */,
+			);
+			path = ImageReduction;
+			sourceTree = "<group>";
+		};
+		3DE599D3260D22B600220450 /* Supportive Structs */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599D4260D22B600220450 /* HSV.swift */,
+				3DE599D5260D22B600220450 /* RGB.swift */,
+				3DE599D6260D22B600220450 /* Coord.swift */,
+			);
+			path = "Supportive Structs";
+			sourceTree = "<group>";
+		};
+		3DE599ED260D22BD00220450 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				3DE599EE260D22BD00220450 /* AmbilightPreview.swift */,
+			);
+			name = "User Interface";
+			path = "Ambient Lighting/User Interface";
+			sourceTree = SOURCE_ROOT;
+		};
+		3DE59A0B260D26B200220450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE59A10260D26B200220450 /* ORSSerial.framework */,
+				3DE59A12260D26B200220450 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE59A18260D26DC00220450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE59989260D223F00220450 /* Ambient Lighting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE599B0260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient Lighting" */;
+			buildPhases = (
+				3DE59986260D223F00220450 /* Sources */,
+				3DE59987260D223F00220450 /* Frameworks */,
+				3DE59988260D223F00220450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ambient Lighting";
+			productName = "Ambient Lighting";
+			productReference = 3DE5998A260D223F00220450 /* Ambient Lighting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE5999B260D224000220450 /* Ambient LightingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE599B3260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient LightingTests" */;
+			buildPhases = (
+				3DE59998260D224000220450 /* Sources */,
+				3DE59999260D224000220450 /* Frameworks */,
+				3DE5999A260D224000220450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE5999E260D224000220450 /* PBXTargetDependency */,
+			);
+			name = "Ambient LightingTests";
+			productName = "Ambient LightingTests";
+			productReference = 3DE5999C260D224000220450 /* Ambient LightingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3DE599A6260D224000220450 /* Ambient LightingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE599B6260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient LightingUITests" */;
+			buildPhases = (
+				3DE599A3260D224000220450 /* Sources */,
+				3DE599A4260D224000220450 /* Frameworks */,
+				3DE599A5260D224000220450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE599A9260D224000220450 /* PBXTargetDependency */,
+			);
+			name = "Ambient LightingUITests";
+			productName = "Ambient LightingUITests";
+			productReference = 3DE599A7260D224000220450 /* Ambient LightingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE59982260D223F00220450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3DE59989260D223F00220450 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3DE5999B260D224000220450 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3DE59989260D223F00220450;
+					};
+					3DE599A6260D224000220450 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3DE59989260D223F00220450;
+					};
+				};
+			};
+			buildConfigurationList = 3DE59985260D223F00220450 /* Build configuration list for PBXProject "Ambient Lighting" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DE59981260D223F00220450;
+			productRefGroup = 3DE5998B260D223F00220450 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3DE59A0B260D26B200220450 /* Products */;
+					ProjectRef = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3DE59989260D223F00220450 /* Ambient Lighting */,
+				3DE5999B260D224000220450 /* Ambient LightingTests */,
+				3DE599A6260D224000220450 /* Ambient LightingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3DE59A10260D26B200220450 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 3DE59A0F260D26B200220450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3DE59A12260D26B200220450 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 3DE59A11260D26B200220450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE59988260D223F00220450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE59995260D224000220450 /* Preview Assets.xcassets in Resources */,
+				3DE59992260D224000220450 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE5999A260D224000220450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE599A5260D224000220450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE59986260D223F00220450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE599E9260D22B600220450 /* Coord.swift in Sources */,
+				3DE599E3260D22B600220450 /* MatrixSpliiterConfiguration.swift in Sources */,
+				3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */,
+				3DE599DA260D22B600220450 /* AmbilightCreator.swift in Sources */,
+				3DE599E5260D22B600220450 /* ScalingReduction.swift in Sources */,
+				3DE599E7260D22B600220450 /* HSV.swift in Sources */,
+				3DE599E2260D22B600220450 /* MatrixSplitter.swift in Sources */,
+				3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */,
+				3DE599D8260D22B600220450 /* MatrixSplitAmbilightPreview.swift in Sources */,
+				3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */,
+				3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */,
+				3DE59990260D223F00220450 /* ContentView.swift in Sources */,
+				3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */,
+				3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */,
+				3DE599DD260D22B600220450 /* SatisfactionCorrection.swift in Sources */,
+				3DE599F2260D22BE00220450 /* AmbilightPreview.swift in Sources */,
+				3DE599DF260D22B600220450 /* ImageSource.swift in Sources */,
+				3DE599E1260D22B600220450 /* MatrixSplitterExamples.swift in Sources */,
+				3DE599E8260D22B600220450 /* RGB.swift in Sources */,
+				3DE599D7260D22B600220450 /* MultiAmbilightOutput.swift in Sources */,
+				3DE599E0260D22B600220450 /* ScreenCapture.swift in Sources */,
+				3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */,
+				3DE599E6260D22B600220450 /* ImageReduction.swift in Sources */,
+				3DE59A23260D277800220450 /* Examples.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE59998260D224000220450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE599A1260D224000220450 /* Ambient_LightingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE599A3260D224000220450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE599AC260D224000220450 /* Ambient_LightingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE5999E260D224000220450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE59989260D223F00220450 /* Ambient Lighting */;
+			targetProxy = 3DE5999D260D224000220450 /* PBXContainerItemProxy */;
+		};
+		3DE599A9260D224000220450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE59989260D223F00220450 /* Ambient Lighting */;
+			targetProxy = 3DE599A8260D224000220450 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DE599AE260D224000220450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DE599AF260D224000220450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3DE599B1260D224000220450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ambient Lighting/Ambient_Lighting.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Ambient Lighting/Preview Content\"";
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Ambient Lighting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-Lighting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3DE599B2260D224000220450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ambient Lighting/Ambient_Lighting.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Ambient Lighting/Preview Content\"";
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Ambient Lighting/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-Lighting";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3DE599B4260D224000220450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				INFOPLIST_FILE = "Ambient LightingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-LightingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ambient Lighting.app/Contents/MacOS/Ambient Lighting";
+			};
+			name = Debug;
+		};
+		3DE599B5260D224000220450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				INFOPLIST_FILE = "Ambient LightingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-LightingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ambient Lighting.app/Contents/MacOS/Ambient Lighting";
+			};
+			name = Release;
+		};
+		3DE599B7260D224000220450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				INFOPLIST_FILE = "Ambient LightingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-LightingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Ambient Lighting";
+			};
+			name = Debug;
+		};
+		3DE599B8260D224000220450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5H47YR466G;
+				INFOPLIST_FILE = "Ambient LightingUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "JandeBoer.Ambient-LightingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Ambient Lighting";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE59985260D223F00220450 /* Build configuration list for PBXProject "Ambient Lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE599AE260D224000220450 /* Debug */,
+				3DE599AF260D224000220450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE599B0260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient Lighting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE599B1260D224000220450 /* Debug */,
+				3DE599B2260D224000220450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE599B3260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient LightingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE599B4260D224000220450 /* Debug */,
+				3DE599B5260D224000220450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE599B6260D224000220450 /* Build configuration list for PBXNativeTarget "Ambient LightingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE599B7260D224000220450 /* Debug */,
+				3DE599B8260D224000220450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE59982260D223F00220450 /* Project object */;
+}

@@ -14,6 +14,13 @@ struct HSV {
 }
 
 extension HSV {
+    
+    init(_ hue: CGFloat, _ sat: CGFloat, _ val: CGFloat) {
+        self.hue = hue
+        self.sat = sat
+        self.val = val
+    }
+    
     init(rgb: RGB) {
         let red = rgb.red
         let green = rgb.green

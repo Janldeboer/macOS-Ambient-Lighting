@@ -14,6 +14,13 @@ struct RGB {
 }
 
 extension RGB {
+    
+    init(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+    }
+    
     init(hsv: HSV) {
         
         let hue = hsv.hue

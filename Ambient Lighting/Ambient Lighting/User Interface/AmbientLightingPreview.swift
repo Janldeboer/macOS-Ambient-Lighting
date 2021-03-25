@@ -11,8 +11,10 @@ struct AmbientLightingPreview: View {
     
     let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
+    let matrixSplitterConfig = Examples.getBigMatrixSplitterConfig()
+    
     let imageSource = ScreenCapture()
-    let imageSplitter = MatrixSplitter(config: Examples.getBigMatrixSplitterConfig())
+    let imageSplitter: MatrixSplitter
     let imageReducer = ScalingReduction()
     let creator: AmbilightCreator
     let output = SerialOutput()
@@ -20,6 +22,7 @@ struct AmbientLightingPreview: View {
     @State var colors: [CGColor] = []
     
     init() {
+        imageSplitter = MatrixSplitter(config: matrixSplitterConfig)
         creator = AmbilightCreator(imageSplitter: imageSplitter, imageReduction: imageReducer, colorCorrection: nil)
         
         output.selectPort(withPath: "/dev/cu.usbmodem11301")
@@ -29,7 +32,7 @@ struct AmbientLightingPreview: View {
     
     var body: some View {
         
-        MatrixSplitAmbilightPreview(colors: $colors, config: Examples.getBigMatrixSplitterConfig())
+        MatrixSplitAmbilightPreview(colors: $colors, config: matrixSplitterConfig)
             .onReceive(timer, perform: { _ in
                 colors = creator.getColors(forImage: imageSource.getImage())
                 output.outputColors(colors: colors)

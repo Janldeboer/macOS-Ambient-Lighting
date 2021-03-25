@@ -32,7 +32,7 @@
 		3DE599E7260D22B600220450 /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D4260D22B600220450 /* HSV.swift */; };
 		3DE599E8260D22B600220450 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D5260D22B600220450 /* RGB.swift */; };
 		3DE599E9260D22B600220450 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D6260D22B600220450 /* Coord.swift */; };
-		3DE599F2260D22BE00220450 /* AmbilightPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599EE260D22BD00220450 /* AmbilightPreview.swift */; };
+		3DE599F2260D22BE00220450 /* AmbientLightingPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599EE260D22BD00220450 /* AmbientLightingPreview.swift */; };
 		3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599F1260D22BE00220450 /* SerialOutput.swift */; };
 		3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE59A10260D26B200220450 /* ORSSerial.framework */; };
 		3DE59A23260D277800220450 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A22260D277800220450 /* Examples.swift */; };
@@ -102,7 +102,7 @@
 		3DE599D4260D22B600220450 /* HSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSV.swift; sourceTree = "<group>"; };
 		3DE599D5260D22B600220450 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 		3DE599D6260D22B600220450 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
-		3DE599EE260D22BD00220450 /* AmbilightPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbilightPreview.swift; sourceTree = "<group>"; };
+		3DE599EE260D22BD00220450 /* AmbientLightingPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbientLightingPreview.swift; sourceTree = "<group>"; };
 		3DE599F1260D22BE00220450 /* SerialOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOutput.swift; sourceTree = "<group>"; };
 		3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 		3DE59A22260D277800220450 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		3DE599ED260D22BD00220450 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				3DE599EE260D22BD00220450 /* AmbilightPreview.swift */,
+				3DE599EE260D22BD00220450 /* AmbientLightingPreview.swift */,
 			);
 			name = "User Interface";
 			path = "Ambient Lighting/User Interface";
@@ -473,7 +473,7 @@
 				3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */,
 				3DE599D9260D22B600220450 /* AmbilightOutput.swift in Sources */,
 				3DE599DD260D22B600220450 /* SatisfactionCorrection.swift in Sources */,
-				3DE599F2260D22BE00220450 /* AmbilightPreview.swift in Sources */,
+				3DE599F2260D22BE00220450 /* AmbientLightingPreview.swift in Sources */,
 				3DE599DF260D22B600220450 /* ImageSource.swift in Sources */,
 				3DE599E1260D22B600220450 /* MatrixSplitterExamples.swift in Sources */,
 				3DE599E8260D22B600220450 /* RGB.swift in Sources */,

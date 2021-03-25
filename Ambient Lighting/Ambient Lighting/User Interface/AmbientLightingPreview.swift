@@ -1,5 +1,5 @@
 //
-//  AmbilightPreview.swift
+//  AmbientLightingPreview.swift
 //  Screen Analyzer
 //
 //  Created by Jan de Boer on 25.03.21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AmbilightPreview: View {
+struct AmbientLightingPreview: View {
     
     let timer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
     
@@ -40,6 +40,6 @@ struct AmbilightPreview: View {
 
 struct AmbilightPreview_Previews: PreviewProvider {
     static var previews: some View {
-        AmbilightPreview()
+        AmbientLightingPreview()
     }
 }

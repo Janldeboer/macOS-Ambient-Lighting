@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DCB9D0B260D768B00E2744B /* ChannelGammaCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D0A260D768B00E2744B /* ChannelGammaCorrection.swift */; };
 		3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */; };
 		3DE59990260D223F00220450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998F260D223F00220450 /* ContentView.swift */; };
 		3DE59992260D224000220450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE59991260D224000220450 /* Assets.xcassets */; };
@@ -17,7 +18,7 @@
 		3DE599D8260D22B600220450 /* MatrixSplitPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599BF260D22B600220450 /* MatrixSplitPreview.swift */; };
 		3DE599D9260D22B600220450 /* LightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C0260D22B600220450 /* LightOutput.swift */; };
 		3DE599DA260D22B600220450 /* AmbientLightingCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C1260D22B600220450 /* AmbientLightingCreator.swift */; };
-		3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */; };
+		3DE599DB260D22B600220450 /* ChannelLinearCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C3260D22B600220450 /* ChannelLinearCorrection.swift */; };
 		3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */; };
 		3DE599DD260D22B600220450 /* SaturationCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C5260D22B600220450 /* SaturationCorrection.swift */; };
 		3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599C6260D22B600220450 /* ColorCorrection.swift */; };
@@ -36,6 +37,7 @@
 		3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599F1260D22BE00220450 /* SerialOutput.swift */; };
 		3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE59A10260D26B200220450 /* ORSSerial.framework */; };
 		3DE59A23260D277800220450 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A22260D277800220450 /* Examples.swift */; };
+		3DE59A48260D625300220450 /* ExampleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A47260D625300220450 /* ExampleCorrection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3DCB9D0A260D768B00E2744B /* ChannelGammaCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelGammaCorrection.swift; sourceTree = "<group>"; };
 		3DE5998A260D223F00220450 /* Ambient Lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambient Lighting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingApp.swift; sourceTree = "<group>"; };
 		3DE5998F260D223F00220450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,7 +90,7 @@
 		3DE599BF260D22B600220450 /* MatrixSplitPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixSplitPreview.swift; sourceTree = "<group>"; };
 		3DE599C0260D22B600220450 /* LightOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightOutput.swift; sourceTree = "<group>"; };
 		3DE599C1260D22B600220450 /* AmbientLightingCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmbientLightingCreator.swift; sourceTree = "<group>"; };
-		3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelScaleCorrection.swift; sourceTree = "<group>"; };
+		3DE599C3260D22B600220450 /* ChannelLinearCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelLinearCorrection.swift; sourceTree = "<group>"; };
 		3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
 		3DE599C5260D22B600220450 /* SaturationCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationCorrection.swift; sourceTree = "<group>"; };
 		3DE599C6260D22B600220450 /* ColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCorrection.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		3DE599F1260D22BE00220450 /* SerialOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOutput.swift; sourceTree = "<group>"; };
 		3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 		3DE59A22260D277800220450 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
+		3DE59A47260D625300220450 /* ExampleCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCorrection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,9 +231,11 @@
 			isa = PBXGroup;
 			children = (
 				3DE599C6260D22B600220450 /* ColorCorrection.swift */,
-				3DE599C3260D22B600220450 /* ChannelScaleCorrection.swift */,
+				3DE599C3260D22B600220450 /* ChannelLinearCorrection.swift */,
+				3DCB9D0A260D768B00E2744B /* ChannelGammaCorrection.swift */,
 				3DE599C4260D22B600220450 /* ChainedColorCorrection.swift */,
 				3DE599C5260D22B600220450 /* SaturationCorrection.swift */,
+				3DE59A47260D625300220450 /* ExampleCorrection.swift */,
 			);
 			path = ColorCorrection;
 			sourceTree = "<group>";
@@ -463,12 +469,14 @@
 				3DE599F4260D22BE00220450 /* SerialOutput.swift in Sources */,
 				3DE599DA260D22B600220450 /* AmbientLightingCreator.swift in Sources */,
 				3DE599E5260D22B600220450 /* ScalingReduction.swift in Sources */,
+				3DCB9D0B260D768B00E2744B /* ChannelGammaCorrection.swift in Sources */,
 				3DE599E7260D22B600220450 /* HSV.swift in Sources */,
 				3DE599E2260D22B600220450 /* MatrixSplitter.swift in Sources */,
 				3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */,
 				3DE599D8260D22B600220450 /* MatrixSplitPreview.swift in Sources */,
+				3DE59A48260D625300220450 /* ExampleCorrection.swift in Sources */,
 				3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */,
-				3DE599DB260D22B600220450 /* ChannelScaleCorrection.swift in Sources */,
+				3DE599DB260D22B600220450 /* ChannelLinearCorrection.swift in Sources */,
 				3DE59990260D223F00220450 /* ContentView.swift in Sources */,
 				3DE599E4260D22B600220450 /* ImageSplitter.swift in Sources */,
 				3DE599D9260D22B600220450 /* LightOutput.swift in Sources */,

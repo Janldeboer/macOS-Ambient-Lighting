@@ -13,9 +13,13 @@ struct AmbientLightingCreator {
     var imageReduction: ImageReduction
     var colorCorrection: ColorCorrection?
     
-    func getColors(forImage image: CGImage) -> [CGColor] {
+    func getUncorrectedColors(forImage image: CGImage) -> [CGColor] {
         let images = imageSplitter.splitImage(image: image)
-        var colors = imageReduction.reduceImages(images: images)
+        return imageReduction.reduceImages(images: images)
+    }
+    
+    func getColors(forImage image: CGImage) -> [CGColor] {
+        var colors = getUncorrectedColors(forImage: image)
         if let correction = colorCorrection {
             colors = correction.correctColors(colors: colors)
         }

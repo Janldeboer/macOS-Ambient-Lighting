@@ -15,7 +15,7 @@ struct ImageSourceView: View {
             RoundedRectangle(cornerRadius: 20
             )
                 .foregroundColor(.init(red: 0.3, green: 0.3, blue: 0.3))
-            VStack {
+            VStack (spacing: 0) {
                 if imageSource == nil {
                     Button("Add ScreenCapture as image Source") {
                         imageSource = ScreenCapture()
@@ -28,9 +28,10 @@ struct ImageSourceView: View {
                         }.padding()
                     }
                     if imageSource is ScreenCapture {
+                        
                         let bind = Binding<ScreenCapture>(get: { imageSource as! ScreenCapture}, set: { imageSource = $0})
                         ScreenCaptureSourceView(imageSource: bind)
-                            .padding()
+                            .padding([.leading, .trailing, .bottom])
                     }
                 }
             }

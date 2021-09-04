@@ -7,17 +7,15 @@
 
 import Foundation
 
-struct ChannelGammaCorrection: ColorCorrection {
+struct ChannelGammaCorrection: ChannelColorCorrection {
     
-    var rGamma: CGFloat
-    var gGamma: CGFloat
-    var bGamma: CGFloat
+    var strength: RGB
     
     func correctColor(color: CGColor) -> CGColor {
         if let components = color.components {
-            let r = pow(components[0], rGamma)
-            let g = pow(components[1], gGamma)
-            let b = pow(components[2], bGamma)
+            let r = pow(components[0], strength.red)
+            let g = pow(components[1], strength.green)
+            let b = pow(components[2], strength.blue)
             return CGColor(red: r, green: g, blue: b, alpha: 1)
         } else {
             return color

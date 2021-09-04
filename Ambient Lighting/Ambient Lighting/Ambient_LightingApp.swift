@@ -11,7 +11,7 @@ import SwiftUI
 struct Ambient_LightingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AmbientLightingView()
         }
     }
 }

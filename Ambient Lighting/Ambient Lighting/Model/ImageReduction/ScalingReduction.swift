@@ -21,45 +21,38 @@ struct ScalingReduction: ImageReduction {
 extension CGImage {
     
     func resize(width: Int, height: Int) -> CGImage? {
-        
-        
         guard let colorSpace = self.colorSpace else { return nil }
         guard let context = CGContext(data: nil, width: width, height: height, bitsPerComponent: self.bitsPerComponent, bytesPerRow: self.bytesPerRow, space: colorSpace, bitmapInfo: self.bitmapInfo.rawValue) else { return nil }
         
-        // draw image to context (resizing it)
         context.interpolationQuality = .none
         context.draw(self, in: CGRect(x: 0, y: 0, width: width, height: height))
         
-        // extract resulting image from context
         return context.makeImage()
-        
+    }
+    
+    func pixelData() -> [UInt8]? {
+        let dataSize = self.width * self.height * 4
+        var pixelData = [UInt8](repeating: 0, count: Int(dataSize))
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: &pixelData,
+                                width: Int(self.width),
+                                height: Int(self.height),
+                                bitsPerComponent: 8,
+                                bytesPerRow: 4 * Int(self.width),
+                                space: colorSpace,
+                                bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
+        context?.draw(self, in: CGRect(x: 0, y: 0, width: self.width, height: self.height))
+        return pixelData
     }
     
     func getFirstPixel() -> CGColor? {
-        assert(self.bitsPerPixel == 32, "only support 32 bit images")
-        assert(self.bitsPerComponent == 8,  "only support 8 bit per channel")
-        guard let imageData = self.dataProvider?.data as Data? else {
-            return nil
+        if let pixels = pixelData() {
+            let r: CGFloat = CGFloat(pixels[0]) / 255.0
+            let g: CGFloat = CGFloat(pixels[1]) / 255.0
+            let b: CGFloat = CGFloat(pixels[2]) / 255.0
+            let color = CGColor(red: r, green: g, blue: b, alpha: 1.0)
+            return color
         }
-        let size = self.width * self.height
-        let buffer = UnsafeMutableBufferPointer<UInt32>.allocate(capacity: size)
-        _ = imageData.copyBytes(to: buffer)
-        var result = [CGColor]()
-        result.reserveCapacity(size)
-        let firstPixel = buffer[0]
-        var r : UInt32 = 0
-        var g : UInt32 = 0
-        var b : UInt32 = 0
-        if self.byteOrderInfo == .orderDefault || self.byteOrderInfo == .order32Big {
-            r = firstPixel & 255
-            g = (firstPixel >> 8) & 255
-            b = (firstPixel >> 16) & 255
-        } else if self.byteOrderInfo == .order32Little {
-            r = (firstPixel >> 16) & 255
-            g = (firstPixel >> 8) & 255
-            b = firstPixel & 255
-        }
-        let color = CGColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1)
-        return color
+        return nil
     }
 }

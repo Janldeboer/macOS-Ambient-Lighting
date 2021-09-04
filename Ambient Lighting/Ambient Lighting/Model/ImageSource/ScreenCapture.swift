@@ -9,23 +9,18 @@ import Foundation
 import Cocoa
 
 struct ScreenCapture: ImageSource {
+    var display: CGDirectDisplayID = CGMainDisplayID()
     
     func getImage() -> CGImage {
         return captureScreen()!
     }
     
-    var display: CGDirectDisplayID
-    
-    init() {
-        display = CGMainDisplayID()
-    }
-    
-    func getActiveDisplays() -> [CGDirectDisplayID]? {
+    func getActiveDisplays() -> [CGDirectDisplayID] {
         var displayCount: UInt32 = 0;
         var result = CGGetActiveDisplayList(0, nil, &displayCount)
         if (result != CGError.success) {
             print("error: \(result)")
-            return nil
+            return []
         }
         let allocated = Int(displayCount)
         let activeDisplays = UnsafeMutablePointer<CGDirectDisplayID>.allocate(capacity: allocated)
@@ -33,7 +28,7 @@ struct ScreenCapture: ImageSource {
         
         if (result != CGError.success) {
             print("error: \(result)")
-            return nil
+            return []
         }
         
         let displayBuffer: [CGDirectDisplayID] = Array(UnsafeBufferPointer(start: activeDisplays, count: Int(displayCount)))
@@ -42,6 +37,10 @@ struct ScreenCapture: ImageSource {
     }
     
     func captureScreen() -> CGImage? {
-        return CGDisplayCreateImage(display)
+        if getActiveDisplays().contains(display) {
+            return CGDisplayCreateImage(display)
+        } else {
+            return CGDisplayCreateImage(CGMainDisplayID())
+        }
     }
 }

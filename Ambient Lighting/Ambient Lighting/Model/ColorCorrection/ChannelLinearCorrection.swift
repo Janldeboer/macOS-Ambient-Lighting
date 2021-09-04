@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct ChannelLinearCorrection: ColorCorrection {
+struct ChannelLinearCorrection: ChannelColorCorrection {
     
-    var maxColor: RGB
+    var strength: RGB
     
     func correctColor(color: CGColor) -> CGColor {
         if let components = color.components {
-            let r = components[0] * maxColor.red
-            let g = components[1] * maxColor.green
-            let b = components[2] * maxColor.blue
+            let r = components[0] * strength.red
+            let g = components[1] * strength.green
+            let b = components[2] * strength.blue
             return CGColor(red: r, green: g, blue: b, alpha: 1)
         } else {
             return color

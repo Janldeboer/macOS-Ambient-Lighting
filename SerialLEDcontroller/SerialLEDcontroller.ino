@@ -13,7 +13,7 @@ CRGB leds[NUM_LEDS];
 
 // Variables for Storing Bytes received by the serial port
 
-byte index = 0;
+byte ind = 0;
 byte red = 0;
 byte green = 0;
 byte blue = 0;
@@ -71,8 +71,8 @@ void readSerial() {
         return;
       }
       if(flag == 3){
-        index = newByte;
-        if (index < NUM_LEDS) {
+        ind = newByte;
+        if (ind < NUM_LEDS) {
           flag++;
         } else {
           flag = 0;
@@ -92,7 +92,7 @@ void readSerial() {
       if(flag == 6){
         blue = newByte;
         flag = 0;
-        leds[index] = CRGB(red, green, blue);
+        leds[ind] = CRGB(red, green, blue);
         return;
       }
       flag = 0;

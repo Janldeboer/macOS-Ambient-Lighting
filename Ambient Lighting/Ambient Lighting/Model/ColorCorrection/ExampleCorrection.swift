@@ -13,11 +13,11 @@ extension Examples {
     }
     
     static func getChannelLinearCorrection() -> ChannelLinearCorrection {
-        return ChannelLinearCorrection(maxColor: RGB(1.0, 0.7, 0.3))
+        return ChannelLinearCorrection(strength: RGB(1.0, 0.6, 0.2))
     }
     
     static func getChannelGammaCorrection() -> ChannelGammaCorrection {
-        return ChannelGammaCorrection(rGamma: 1.5, gGamma: 1.5, bGamma: 1.5)
+        return ChannelGammaCorrection(strength: RGB(1.5, 1.5, 1.5))
     }
     
     static func getChainedCorrection() -> ChainedColorCorrection {

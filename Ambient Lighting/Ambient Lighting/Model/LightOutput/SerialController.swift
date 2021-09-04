@@ -1,5 +1,5 @@
 //
-//  SerialOutput.swift
+//  SerialController.swift
 //  Ambient Lighting
 //
 //  Created by Jan de Boer on 08.03.21.
@@ -11,8 +11,7 @@ import SwiftUI
 
 
 
-class SerialOutput: NSObject, ORSSerialPortDelegate, LightOutput {
-    
+class SerialController: NSObject, ORSSerialPortDelegate {
     
     @objc let serialPortManager = ORSSerialPortManager.shared()
     @objc let availableBaudRates = [300, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, 115200, 230400]
@@ -57,45 +56,6 @@ class SerialOutput: NSObject, ORSSerialPortDelegate, LightOutput {
     
     override init() {
         super.init()
-    }
-    
-    // MARK: - LED Controlling
-    
-    func ledOn(num: Int, r: Int, g: Int, b: Int) {
-        print("Setting led \(num) to \(r) \(g) \(b)")
-        
-        var data: Data
-        let text = "led"
-        
-        data = text.data(using: String.Encoding.utf8)!
-        
-        var i = UInt8(Double(num))
-        var red = UInt8(Double(r))
-        var green = UInt8(Double(g))
-        var blue = UInt8(Double(b))
-        
-        data.append(Data(bytes: &i, count: 1))
-        data.append(Data(bytes: &red, count: 1))
-        data.append(Data(bytes: &green, count: 1))
-        data.append(Data(bytes: &blue, count: 1))
-        
-        self.serialPort?.send(data)
-    }
-    
-    func outputColors(colors: [CGColor]) {
-        for i in 0 ..< colors.count {
-            ledOn(num: i, color: colors[i])
-        }
-        refreshLEDs()
-    }
-    
-    func ledOn(num: Int, color: CGColor){
-        let comp = color.components!
-        ledOn(num: num, r: Int(comp[0]*255), g: Int(comp[1]*255), b: Int(comp[2]*255))
-    }
-    
-    func refreshLEDs() {
-        sendString(text: "les")
     }
     
     // MARK: - Actions

@@ -27,3 +27,7 @@ extension CGColor {
         return corrector.correctColor(color: self)
     }
 }
+
+protocol ChannelColorCorrection : ColorCorrection {
+    var strength: RGB { get set }
+}

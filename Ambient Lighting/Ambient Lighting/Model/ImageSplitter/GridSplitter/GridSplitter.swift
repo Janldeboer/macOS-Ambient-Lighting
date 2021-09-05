@@ -24,23 +24,28 @@ struct GridSplitter: ImageSplitter {
         let partWidth: Int = image.width / config.columns
         let partHeight: Int = image.height / config.rows
         
-        let cutoffs = blackLineDetector.getCroping(image: image)
+        let cutoffs = ignoreBlackLines ? blackLineDetector.getCroping(image: image) : nil
         
         for coord in config.parts {
-            var x = coord.x * partWidth
-            var y = coord.y * partHeight
-            
-            if ignoreBlackLines {
-                x = x.clamped(to: cutoffs.minX ... cutoffs.maxX)
-                y = y.clamped(to: cutoffs.minY ... cutoffs.maxY)
-            }
-            
-            let rect = CGRect(x: x, y: y, width: partWidth, height: partHeight)
+            let rect = getRect(fromCoord: coord, width: partWidth, height: partHeight, cutoffs: cutoffs)
             if let cropped = image.cropping(to: rect) {
                 images.append(cropped)
             }
         }
         return images
+    }
+    
+    func getRect(fromCoord coord: Coord, width: Int, height: Int, cutoffs: Cutoffs?) -> CGRect {
+        
+        var x = coord.x * width
+        var y = coord.y * height
+        
+        if let c = cutoffs {
+            x = x.clamped(to: c.xMin ... c.xMax)
+            y = y.clamped(to: c.yMin ... c.yMax)
+        }
+        
+        return CGRect(x: x, y: y, width: width, height: height)
     }
     
     func getColor(x: Int, y: Int, colors: [CGColor]) -> Color {

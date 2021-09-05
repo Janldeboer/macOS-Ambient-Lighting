@@ -16,12 +16,12 @@ struct BlackLineDetector {
     let maxFactor = 0.8
     
     /// TODO : Refactor this ugly method
-    func getCroping(image: CGImage) -> (minX: Int, maxX: Int, minY: Int, maxY: Int) {
+    func getCroping(image: CGImage) -> Cutoffs {
         let width = image.width
         let height = image.height
         
         guard let pixels = image.pixelData() else {
-            return (minX: 0, maxX: width, minY: 0, maxY: height)
+            return Cutoffs(xMin: 0, xMax: width, yMin: 0, yMax: height)
         }
         
         let xStep = Int(CGFloat(image.width) * accuracy)
@@ -121,10 +121,17 @@ struct BlackLineDetector {
         let maxX = xTest
         
         
-        return (minX: minX, maxX: maxX, minY: minY, maxY: maxY)
+        return Cutoffs(xMin: minX, xMax: maxX, yMin: minY, yMax: maxY)
     }
     
     func getSum(_ r: UInt8, _ g: UInt8, _ b: UInt8) -> Int {
         return Int(r) + Int(g) + Int(b)
     }
+}
+
+struct Cutoffs {
+    var xMin: Int
+    var xMax: Int
+    var yMin: Int
+    var yMax: Int
 }

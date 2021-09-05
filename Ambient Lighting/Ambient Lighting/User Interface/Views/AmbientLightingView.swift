@@ -16,6 +16,7 @@ struct AmbientLightingView: View {
         VStack {
             ImageSourceView(imageSource: $model.source)
             ImageSplitterView(splitter: $model.splitter, colors: $model.colors)
+            ColorCorrectionView(correction: $model.correction)
             LightOutputView(output: $model.output)
             
             Button(action: {

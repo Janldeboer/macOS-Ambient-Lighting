@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct ChainedColorCorrection: ColorCorrection {
+struct ChainedColorCorrection: ColorCorrection, Equatable {
     
+    var id = UUID()
     var correctors: [ColorCorrection]
     
     func correctColor(color: CGColor) -> CGColor {
@@ -17,5 +18,9 @@ struct ChainedColorCorrection: ColorCorrection {
             newColor = corrector.correctColor(color: newColor)
         }
         return newColor
+    }
+    
+    static func == (lhs: ChainedColorCorrection, rhs: ChainedColorCorrection) -> Bool {
+        return lhs.id == rhs.id
     }
 }

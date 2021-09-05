@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D12D33B26DFB09E00CCEE09 /* SaturationCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */; };
 		3D5A6D9226C0617D001F9740 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */; };
+		3D715A6E26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6D26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift */; };
+		3D715A7026E4DEFE001D93B1 /* ChainedCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6F26E4DEFE001D93B1 /* ChainedCorrectionView.swift */; };
 		3D79AFAA26E0DB7900443991 /* AmbilightCompution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFA926E0DB7900443991 /* AmbilightCompution.swift */; };
 		3D79AFB226E0DD4000443991 /* ImageSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFB126E0DD4000443991 /* ImageSourceView.swift */; };
 		3D79AFBA26E3A0E700443991 /* AmbientLightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFB926E3A0E700443991 /* AmbientLightingView.swift */; };
@@ -21,7 +23,7 @@
 		3DCB9D13260E29B400E2744B /* CorrectedLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D12260E29B400E2744B /* CorrectedLightOutput.swift */; };
 		3DCB9D1B260E2D6200E2744B /* SerialLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D1A260E2D6200E2744B /* SerialLightOutput.swift */; };
 		3DDE6BD726DB8FC800825C56 /* SerialSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE6BD626DB8FC800825C56 /* SerialSettingsView.swift */; };
-		3DDE6BD926DB902100825C56 /* ColorCorrectionSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE6BD826DB902100825C56 /* ColorCorrectionSetupView.swift */; };
+		3DDE6BD926DB902100825C56 /* ColorCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE6BD826DB902100825C56 /* ColorCorrectionView.swift */; };
 		3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */; };
 		3DE59990260D223F00220450 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE5998F260D223F00220450 /* ContentView.swift */; };
 		3DE59992260D224000220450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE59991260D224000220450 /* Assets.xcassets */; };
@@ -85,6 +87,8 @@
 /* Begin PBXFileReference section */
 		3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationCorrectionView.swift; sourceTree = "<group>"; };
 		3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
+		3D715A6D26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelLinearCorrectionView.swift; sourceTree = "<group>"; };
+		3D715A6F26E4DEFE001D93B1 /* ChainedCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChainedCorrectionView.swift; sourceTree = "<group>"; };
 		3D79AFA926E0DB7900443991 /* AmbilightCompution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightCompution.swift; sourceTree = "<group>"; };
 		3D79AFB126E0DD4000443991 /* ImageSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourceView.swift; sourceTree = "<group>"; };
 		3D79AFB926E3A0E700443991 /* AmbientLightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientLightingView.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		3DCB9D12260E29B400E2744B /* CorrectedLightOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectedLightOutput.swift; sourceTree = "<group>"; };
 		3DCB9D1A260E2D6200E2744B /* SerialLightOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialLightOutput.swift; sourceTree = "<group>"; };
 		3DDE6BD626DB8FC800825C56 /* SerialSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialSettingsView.swift; sourceTree = "<group>"; };
-		3DDE6BD826DB902100825C56 /* ColorCorrectionSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCorrectionSetupView.swift; sourceTree = "<group>"; };
+		3DDE6BD826DB902100825C56 /* ColorCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCorrectionView.swift; sourceTree = "<group>"; };
 		3DE5998A260D223F00220450 /* Ambient Lighting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ambient Lighting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE5998D260D223F00220450 /* Ambient_LightingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ambient_LightingApp.swift; sourceTree = "<group>"; };
 		3DE5998F260D223F00220450 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 		3D12D34126DFB2F100CCEE09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D715A6C26E4DA5A001D93B1 /* ColorCorrectionViews */,
 				3D79AFC726E3FDFA00443991 /* ImageReducerViews */,
 				3D79AFC526E3FDD400443991 /* OutputViews */,
 				3D79AFC426E3FDCA00443991 /* ImageSplitterViews */,
@@ -170,6 +175,17 @@
 				3D79AFB926E3A0E700443991 /* AmbientLightingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3D715A6C26E4DA5A001D93B1 /* ColorCorrectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				3DDE6BD826DB902100825C56 /* ColorCorrectionView.swift */,
+				3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */,
+				3D715A6D26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift */,
+				3D715A6F26E4DEFE001D93B1 /* ChainedCorrectionView.swift */,
+			);
+			path = ColorCorrectionViews;
 			sourceTree = "<group>";
 		};
 		3D79AFB326E104FE00443991 /* Model */ = {
@@ -214,8 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				3DDE6BD626DB8FC800825C56 /* SerialSettingsView.swift */,
-				3DDE6BD826DB902100825C56 /* ColorCorrectionSetupView.swift */,
-				3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */,
 				3D79AFCA26E3FE4600443991 /* LightOutputView.swift */,
 			);
 			path = OutputViews;
@@ -554,7 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE599E9260D22B600220450 /* Coord.swift in Sources */,
-				3DDE6BD926DB902100825C56 /* ColorCorrectionSetupView.swift in Sources */,
+				3DDE6BD926DB902100825C56 /* ColorCorrectionView.swift in Sources */,
 				3DE599E3260D22B600220450 /* GridConfiguration.swift in Sources */,
 				3DE599F4260D22BE00220450 /* SerialController.swift in Sources */,
 				3D79AFBE26E3B2F300443991 /* AmbientLightingViewModel.swift in Sources */,
@@ -566,9 +580,11 @@
 				3DE599E2260D22B600220450 /* GridSplitter.swift in Sources */,
 				3DE599DE260D22B600220450 /* ColorCorrection.swift in Sources */,
 				3D79AFB226E0DD4000443991 /* ImageSourceView.swift in Sources */,
+				3D715A6E26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift in Sources */,
 				3DE599D8260D22B600220450 /* GridSplitterView.swift in Sources */,
 				3D79AFC026E3B30100443991 /* AmbientLightingViewModelBindings.swift in Sources */,
 				3DCB9D1B260E2D6200E2744B /* SerialLightOutput.swift in Sources */,
+				3D715A7026E4DEFE001D93B1 /* ChainedCorrectionView.swift in Sources */,
 				3DE59A48260D625300220450 /* ExampleCorrection.swift in Sources */,
 				3DE599DC260D22B600220450 /* ChainedColorCorrection.swift in Sources */,
 				3DE599DB260D22B600220450 /* ChannelLinearCorrection.swift in Sources */,

@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct SaturationCorrection: ColorCorrection {
+struct SaturationCorrection: ColorCorrection, Equatable {
+    
+    var id = UUID()
     var gamma: CGFloat
     
     func correctColor(color: CGColor) -> CGColor {
@@ -27,6 +29,9 @@ struct SaturationCorrection: ColorCorrection {
         }
     }
     
+    static func == (lhs: SaturationCorrection, rhs: SaturationCorrection) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 extension HSV {

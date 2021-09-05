@@ -23,6 +23,7 @@ class AmbientLightingModel: ObservableObject {
             keepIsRunningValid()
         }
     }
+    @Published var correction: ColorCorrection = ChainedColorCorrection(correctors: [SaturationCorrection(gamma: 1)])
     @Published var output: LightOutput? = nil {
         didSet {
             keepIsRunningValid()
@@ -64,7 +65,8 @@ class AmbientLightingModel: ObservableObject {
         if source != nil && splitter != nil && reducer != nil && output != nil {
             let image = source!.getImage()
             let parts = splitter!.splitImage(image: image)
-            colors = reducer!.reduceImages(images: parts)
+            let uncorrected = reducer!.reduceImages(images: parts)
+            colors = correction.correctColors(colors: uncorrected)
         }
     }
     

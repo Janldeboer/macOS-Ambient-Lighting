@@ -9,6 +9,7 @@ import Foundation
 
 struct ChannelGammaCorrection: ChannelColorCorrection {
     
+    var id = UUID()
     var strength: RGB
     
     func correctColor(color: CGColor) -> CGColor {

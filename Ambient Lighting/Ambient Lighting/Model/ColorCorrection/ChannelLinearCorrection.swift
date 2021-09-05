@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ChannelLinearCorrection: ChannelColorCorrection {
-    
+struct ChannelLinearCorrection: ChannelColorCorrection, ColorCorrection, Equatable {
+    var id = UUID()
     var strength: RGB
     
     func correctColor(color: CGColor) -> CGColor {
@@ -20,5 +20,9 @@ struct ChannelLinearCorrection: ChannelColorCorrection {
         } else {
             return color
         }
+    }
+    
+    static func == (lhs: ChannelLinearCorrection, rhs: ChannelLinearCorrection) -> Bool {
+        return lhs.id == rhs.id
     }
 }

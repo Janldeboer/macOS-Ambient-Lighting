@@ -16,6 +16,7 @@ struct ImageSplitterView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 20
             )
+                .shadow(radius: 10)
                 .foregroundColor(.init(red: 0.3, green: 0.3, blue: 0.3))
             VStack {
                 if splitter == nil {

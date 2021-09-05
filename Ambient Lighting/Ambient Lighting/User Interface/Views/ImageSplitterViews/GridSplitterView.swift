@@ -66,7 +66,10 @@ struct GridSplitterView: View {
                             }
                         }
                     }
-                    Toggle("Reverse", isOn: $splitter.config.reverse)
+                    HStack {
+                        Toggle("Reverse", isOn: $splitter.config.reverse)
+                        Toggle("Ignore Black Bar", isOn: $splitter.config.ignoreBlackBars)
+                    }
                 }
             }
         }

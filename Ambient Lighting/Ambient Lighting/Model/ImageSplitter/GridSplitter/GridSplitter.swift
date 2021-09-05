@@ -15,8 +15,7 @@ struct GridSplitter: ImageSplitter {
     var widthCrop: CGFloat = 0
     var heightCrop: CGFloat = 0
     
-    let blackLineDetector = BlackLineDetector()
-    var ignoreBlackLines = true
+    let blackBarDetector = BlackBarDetector()
     
     func splitImage(image: CGImage) -> [CGImage] {
         var images: [CGImage] = []
@@ -24,7 +23,7 @@ struct GridSplitter: ImageSplitter {
         let partWidth: Int = image.width / config.columns
         let partHeight: Int = image.height / config.rows
         
-        let cutoffs = ignoreBlackLines ? blackLineDetector.getCroping(image: image) : nil
+        let cutoffs = config.ignoreBlackBars ? blackBarDetector.getCroping(image: image) : nil
         
         for coord in config.parts {
             let rect = getRect(fromCoord: coord, width: partWidth, height: partHeight, cutoffs: cutoffs)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AmbientLightingView: View {
     
-    @StateObject var model: AmbientLightingModel = AmbientLightingModel()
+    @StateObject var model: AmbientLightingModel = AmbientLightingModel(source: ScreenCapture(), splitter: GridSplitter(), reducer: ScalingReduction(), output: SerialLightOutput())
     
     var body: some View {
         ScrollView {

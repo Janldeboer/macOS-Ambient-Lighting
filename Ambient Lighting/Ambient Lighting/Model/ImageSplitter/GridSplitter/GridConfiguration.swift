@@ -31,6 +31,7 @@ class GridConfiguration: ObservableObject, Equatable {
         }
     }
     @Published var reverse: Bool = false
+    @Published var ignoreBlackBars: Bool = true
     
     var numberOfPossibleParts: Int {
         return 2 * (rows + columns) - 4

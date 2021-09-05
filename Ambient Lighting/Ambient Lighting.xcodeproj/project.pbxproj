@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D12D33B26DFB09E00CCEE09 /* SaturationCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */; };
-		3D5A6D9226C0617D001F9740 /* BlackLineDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A6D9126C0617D001F9740 /* BlackLineDetector.swift */; };
+		3D5A6D9226C0617D001F9740 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */; };
 		3D79AFAA26E0DB7900443991 /* AmbilightCompution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFA926E0DB7900443991 /* AmbilightCompution.swift */; };
 		3D79AFB226E0DD4000443991 /* ImageSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFB126E0DD4000443991 /* ImageSourceView.swift */; };
 		3D79AFBA26E3A0E700443991 /* AmbientLightingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFB926E3A0E700443991 /* AmbientLightingView.swift */; };
@@ -84,7 +84,7 @@
 
 /* Begin PBXFileReference section */
 		3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaturationCorrectionView.swift; sourceTree = "<group>"; };
-		3D5A6D9126C0617D001F9740 /* BlackLineDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackLineDetector.swift; sourceTree = "<group>"; };
+		3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
 		3D79AFA926E0DB7900443991 /* AmbilightCompution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightCompution.swift; sourceTree = "<group>"; };
 		3D79AFB126E0DD4000443991 /* ImageSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSourceView.swift; sourceTree = "<group>"; };
 		3D79AFB926E3A0E700443991 /* AmbientLightingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbientLightingView.swift; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 			children = (
 				3DE599CB260D22B600220450 /* GridSplitter */,
 				3DE599CF260D22B600220450 /* ImageSplitter.swift */,
-				3D5A6D9126C0617D001F9740 /* BlackLineDetector.swift */,
+				3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */,
 			);
 			path = ImageSplitter;
 			sourceTree = "<group>";
@@ -588,7 +588,7 @@
 				3DE599E0260D22B600220450 /* ScreenCapture.swift in Sources */,
 				3DE5998E260D223F00220450 /* Ambient_LightingApp.swift in Sources */,
 				3DE599E6260D22B600220450 /* ImageReduction.swift in Sources */,
-				3D5A6D9226C0617D001F9740 /* BlackLineDetector.swift in Sources */,
+				3D5A6D9226C0617D001F9740 /* BlackBarDetector.swift in Sources */,
 				3DE59A23260D277800220450 /* Examples.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

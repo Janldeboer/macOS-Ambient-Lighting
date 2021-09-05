@@ -8,10 +8,26 @@
 import Foundation
 
 class AmbientLightingModel: ObservableObject {
-    @Published var source: ImageSource? = nil
-    @Published var splitter: ImageSplitter? = nil
-    @Published var reducer: ImageReduction? = ScalingReduction()
-    @Published var output: LightOutput? = nil
+    @Published var source: ImageSource? = nil {
+        didSet {
+            keepIsRunningValid()
+        }
+    }
+    @Published var splitter: ImageSplitter? = nil {
+        didSet {
+            keepIsRunningValid()
+        }
+    }
+    @Published var reducer: ImageReduction? = ScalingReduction() {
+        didSet {
+            keepIsRunningValid()
+        }
+    }
+    @Published var output: LightOutput? = nil {
+        didSet {
+            keepIsRunningValid()
+        }
+    }
     
     @Published var colors: [CGColor] = [] {
         didSet {
@@ -49,6 +65,12 @@ class AmbientLightingModel: ObservableObject {
             let image = source!.getImage()
             let parts = splitter!.splitImage(image: image)
             colors = reducer!.reduceImages(images: parts)
+        }
+    }
+    
+    func keepIsRunningValid() {
+        if source == nil || splitter == nil || reducer == nil || output == nil {
+            isRunning = false
         }
     }
     

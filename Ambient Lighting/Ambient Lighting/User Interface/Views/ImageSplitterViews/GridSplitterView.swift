@@ -29,7 +29,7 @@ struct GridSplitterView: View {
                     }
                 }
             }
-            DisclosureGroup("Settings") {
+            DisclosureGroup(content: {
                 VStack (alignment: .leading) {
                     HStack {
                         VStack (alignment: .leading) {
@@ -71,7 +71,13 @@ struct GridSplitterView: View {
                         Toggle("Ignore Black Bar", isOn: $splitter.config.ignoreBlackBars)
                     }
                 }
-            }
+            }, label: {
+                HStack {
+                    Text("Settings")
+                        .font(.title2)
+                    Spacer()
+                }
+            })
         }
     }
 }

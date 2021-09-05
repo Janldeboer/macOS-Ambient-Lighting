@@ -24,23 +24,27 @@ struct ImageSplitterView: View {
                         splitter = GridSplitter()
                     }.padding()
                 } else {
-                    HStack {
-                        Text(splitter!.description)
-                            .padding()
-                            .font(.title)
-                        Spacer()
-                        Image("Delete")
-                            .onTapGesture {
-                                splitter = nil
-                            }
-                            .padding()
-                    }
-                    if splitter is GridSplitter {
-                        let bind = Binding<GridSplitter>(get: { splitter as! GridSplitter}, set: { splitter = $0})
-                        GridSplitterView(splitter: bind, colors: _colors)
-                        .padding([.leading, .trailing, .bottom])
-                        
-                    }
+                    
+                    DisclosureGroup(content: {
+                        if splitter is GridSplitter {
+                            let bind = Binding<GridSplitter>(get: { splitter as! GridSplitter}, set: { splitter = $0})
+                            GridSplitterView(splitter: bind, colors: _colors)
+                                .padding([.top])
+                            
+                        }
+                    }, label: {
+                        HStack {
+                            Text(splitter!.description)
+                                .font(.title)
+                                .padding(.leading)
+                            Spacer()
+                            Image("Delete")
+                                .onTapGesture {
+                                    splitter = nil
+                                }
+                        }
+                    })
+                        .padding()
                 }
             }
         }

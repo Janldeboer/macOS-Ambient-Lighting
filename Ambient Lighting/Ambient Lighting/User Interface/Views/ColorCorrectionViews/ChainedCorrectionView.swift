@@ -18,37 +18,42 @@ struct ChainedCorrectionView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Color Corrections")
-                    .font(.title)
-                Spacer()
-            }
-            ForEach($correction.correctors, id:\.id) { $corrector in
-                ZStack {
-                    ColorCorrectionView(correction: $corrector)
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Image("Delete")
-                                .onTapGesture {
-                                    if let i = correction.correctors.firstIndex(where: {$0.isEqual(to: corrector)}) {
-                                        correction.correctors.remove(at: i)
+            DisclosureGroup(content: {
+                ForEach($correction.correctors, id:\.id) { $corrector in
+                    ZStack {
+                        ColorCorrectionView(correction: $corrector)
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Image("Delete")
+                                    .onTapGesture {
+                                        if let i = correction.correctors.firstIndex(where: {$0.isEqual(to: corrector)}) {
+                                            correction.correctors.remove(at: i)
+                                        }
                                     }
-                                }
-                                .padding()
+                                    .padding()
+                            }
+                            Spacer()
                         }
-                        Spacer()
+                    }
+                    .padding()
+                }
+                HStack {
+                    Button("Add Saturation Correction") {
+                        correction.correctors.append(SaturationCorrection(gamma: 1))
+                    }
+                    Button("Add Channel Linear Correction") {
+                        correction.correctors.append(ChannelLinearCorrection(strength: RGB(0.8, 0.4, 0.3)))
                     }
                 }
-            }
-            HStack {
-                Button("Add Saturation Correction") {
-                    correction.correctors.append(SaturationCorrection(gamma: 1))
+            }, label: {
+                HStack {
+                    Text("Color Corrections")
+                        .padding(.leading)
+                        .font(.title)
+                    Spacer()
                 }
-                Button("Add Channel Linear Correction") {
-                    correction.correctors.append(ChannelLinearCorrection(strength: RGB(0.8, 0.4, 0.3)))
-                }
-            }
+            })
         }
     }
 }

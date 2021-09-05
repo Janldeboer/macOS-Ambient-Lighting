@@ -22,23 +22,26 @@ struct ImageSourceView: View {
                         imageSource = ScreenCapture()
                     }.padding()
                 } else {
-                    HStack {
-                        Text(imageSource!.description)
-                            .font(.title)
-                            .padding()
-                        Spacer()
-                        Image("Delete")
-                            .onTapGesture {
-                                imageSource = nil
-                            }
-                            .padding()
-                    }
-                    if imageSource is ScreenCapture {
-                        
-                        let bind = Binding<ScreenCapture>(get: { imageSource as! ScreenCapture}, set: { imageSource = $0})
-                        ScreenCaptureSourceView(imageSource: bind)
-                            .padding([.leading, .trailing, .bottom])
-                    }
+                    DisclosureGroup(content: {
+                        if imageSource is ScreenCapture {
+                            
+                            let bind = Binding<ScreenCapture>(get: { imageSource as! ScreenCapture}, set: { imageSource = $0})
+                            ScreenCaptureSourceView(imageSource: bind)
+                                .padding(.top)
+                        }
+                    }, label: {
+                        HStack {
+                            Text(imageSource!.description)
+                                .font(.title)
+                                .padding(.leading)
+                            Spacer()
+                            Image("Delete")
+                                .onTapGesture {
+                                    imageSource = nil
+                                }
+                        }
+                    })
+                        .padding()
                 }
             }
         }

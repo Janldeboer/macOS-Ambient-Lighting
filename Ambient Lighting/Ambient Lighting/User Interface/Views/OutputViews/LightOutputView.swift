@@ -17,27 +17,32 @@ struct LightOutputView: View {
                 .shadow(radius: 10)
                 .foregroundColor(.init(red: 0.3, green: 0.3, blue: 0.3))
             VStack (spacing: 0) {
+                
                 if output == nil {
                     Button("Add Serial Output") {
                         output = SerialLightOutput()
                     }.padding()
                 } else {
-                    HStack {
-                        Text(output!.description)
-                            .padding()
-                            .font(.title)
-                        Spacer()
-                        Image("Delete")
-                            .onTapGesture {
-                                output = nil
-                            }
-                            .padding()
-                    }
-                    if output is SerialLightOutput {
-                        let bind = Binding<SerialLightOutput>(get: { output as! SerialLightOutput}, set: { output = $0})
-                        SerialSettingsView(output: bind)
-                            .padding([.leading, .trailing, .bottom])
-                    }
+                    DisclosureGroup(content: {
+                        if output is SerialLightOutput {
+                            let bind = Binding<SerialLightOutput>(get: { output as! SerialLightOutput}, set: { output = $0})
+                            SerialSettingsView(output: bind)
+                                .padding([.top])
+                        }
+                        
+                    }, label: {
+                        HStack {
+                            Text(output!.description)
+                                .font(.title)
+                                .padding(.leading)
+                            Spacer()
+                            Image("Delete")
+                                .onTapGesture {
+                                    output = nil
+                                }
+                        }
+                    })
+                        .padding()
                 }
             }
         }

@@ -15,7 +15,7 @@ struct AmbientLightingView: View {
         ScrollView {
         VStack {
             ImageSourceView(imageSource: $model.source)
-            ImageSplitterView(splitter: $model.splitter)
+            ImageSplitterView(splitter: $model.splitter, colors: $model.colors)
             LightOutputView(output: $model.output)
             
             Button(action: {

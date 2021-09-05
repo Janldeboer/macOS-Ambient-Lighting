@@ -43,9 +43,12 @@ struct GridSplitter: ImageSplitter {
         return images
     }
     
-    func getColor(x: Int, y: Int) -> Color {
+    func getColor(x: Int, y: Int, colors: [CGColor]) -> Color {
         let coord = Coord(x: x, y: y)
-        if config.parts.contains(coord) {
+        if let i = config.parts.firstIndex(of: coord) {
+            if i < colors.count {
+                return Color(colors[i])
+            }
             return .blue
         } else {
             return .gray

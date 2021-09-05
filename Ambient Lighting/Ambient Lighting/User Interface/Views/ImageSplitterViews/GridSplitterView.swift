@@ -10,6 +10,7 @@ import SwiftUI
 struct GridSplitterView: View {
     
     @Binding var splitter: GridSplitter
+    @Binding var colors: [CGColor]
     
     var body: some View {
         VStack {
@@ -20,9 +21,9 @@ struct GridSplitterView: View {
                             ZStack() {
                                 Rectangle()
                                     .scaledToFit()
-                                    .foregroundColor(splitter.getColor(x: column, y: row))
+                                    .foregroundColor(splitter.getColor(x: column, y: row, colors: colors))
                                 Text(splitter.getText(x: column, y: row))
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.black)
                             }.frame(minWidth: 20, minHeight: 20)
                         }
                     }

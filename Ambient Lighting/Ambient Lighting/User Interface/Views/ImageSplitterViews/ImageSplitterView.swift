@@ -10,6 +10,7 @@ import SwiftUI
 struct ImageSplitterView: View {
     
     @Binding var splitter: ImageSplitter?
+    @Binding var colors: [CGColor]
     
     var body: some View {
         ZStack {
@@ -30,8 +31,9 @@ struct ImageSplitterView: View {
                     }
                     if splitter is GridSplitter {
                         let bind = Binding<GridSplitter>(get: { splitter as! GridSplitter}, set: { splitter = $0})
-                        GridSplitterView(splitter: bind)
-                            .padding()
+                        GridSplitterView(splitter: bind, colors: _colors)
+                        .padding([.leading, .trailing, .bottom])
+                        
                     }
                 }
             }
@@ -41,6 +43,6 @@ struct ImageSplitterView: View {
 
 struct ImageSplitterView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageSplitterView(splitter: .constant(GridSplitter()))
+        ImageSplitterView(splitter: .constant(GridSplitter()), colors: .constant([]))
     }
 }

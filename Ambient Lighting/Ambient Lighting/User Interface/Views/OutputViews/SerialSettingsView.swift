@@ -26,7 +26,7 @@ struct SerialSettingsView: View {
     
     
     var body: some View {
-        VStack (alignment: .leading){
+        VStack (alignment: .leading, spacing: 0){
             HStack {
                 Picker(selection: $output.controller.serialPort, label: Text("Port")) {
                     ForEach(ORSSerialPortManager.shared().availablePorts, id: \.self) { port in
@@ -44,7 +44,7 @@ struct SerialSettingsView: View {
                 if let port = output.controller.serialPort {
                     port.isOpen ? { _ = port.close() }() : port.open()
                 }
-            })
+            }).padding(.top)
         }
     }
     
@@ -52,10 +52,10 @@ struct SerialSettingsView: View {
         output.controller.selectPort(withPath: path)
     }
 }
-/*
+
  struct SettingsView_Previews: PreviewProvider {
- static var previews: some View {
- SerialSettingsView()
+     static var previews: some View {
+         SerialSettingsView(output: .constant(SerialLightOutput()))
+     }
  }
- }
- */
+ 

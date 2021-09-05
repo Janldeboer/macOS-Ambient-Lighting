@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LightOutput {
+protocol LightOutput: CustomStringConvertible {
     func outputColors(colors: [CGColor])
 }

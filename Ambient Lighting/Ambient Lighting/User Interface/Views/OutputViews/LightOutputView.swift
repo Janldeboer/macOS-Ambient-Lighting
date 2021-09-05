@@ -23,10 +23,15 @@ struct LightOutputView: View {
                     }.padding()
                 } else {
                     HStack {
+                        Text(output!.description)
+                            .padding()
+                            .font(.title)
                         Spacer()
-                        Button("Delete") {
-                            output = nil
-                        }.padding()
+                        Image("Delete")
+                            .onTapGesture {
+                                output = nil
+                            }
+                            .padding()
                     }
                     if output is SerialLightOutput {
                         let bind = Binding<SerialLightOutput>(get: { output as! SerialLightOutput}, set: { output = $0})

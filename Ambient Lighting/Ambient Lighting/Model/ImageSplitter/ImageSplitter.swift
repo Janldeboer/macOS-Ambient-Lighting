@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ImageSplitter {
+protocol ImageSplitter: CustomStringConvertible {
     func splitImage(image: CGImage) -> [CGImage]
 }
 

@@ -14,6 +14,8 @@ struct ChannelLinearCorrectionView: View {
     var body: some View {
         VStack {
             Text("Channel Linear Correction")
+                .font(.title2)
+
             HStack {
                 VStack {
                     Spacer()

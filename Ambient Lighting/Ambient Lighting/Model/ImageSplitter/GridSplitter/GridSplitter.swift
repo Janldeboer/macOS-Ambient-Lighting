@@ -10,6 +10,8 @@ import SwiftUI
 
 struct GridSplitter: ImageSplitter {
     
+    var description: String = "Grid Splitter"
+    
     var config = GridConfiguration()
     
     var widthCrop: CGFloat = 0

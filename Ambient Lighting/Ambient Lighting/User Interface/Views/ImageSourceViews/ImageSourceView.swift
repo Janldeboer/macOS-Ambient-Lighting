@@ -23,10 +23,15 @@ struct ImageSourceView: View {
                     }.padding()
                 } else {
                     HStack {
+                        Text(imageSource!.description)
+                            .font(.title)
+                            .padding()
                         Spacer()
-                        Button("Delete") {
-                            imageSource = nil
-                        }.padding()
+                        Image("Delete")
+                            .onTapGesture {
+                                imageSource = nil
+                            }
+                            .padding()
                     }
                     if imageSource is ScreenCapture {
                         

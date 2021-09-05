@@ -9,6 +9,7 @@ import Foundation
 import Cocoa
 
 struct ScreenCapture: ImageSource {
+    var description: String = "Screen Capture"
     var display: CGDirectDisplayID = CGMainDisplayID()
     
     func getImage() -> CGImage {

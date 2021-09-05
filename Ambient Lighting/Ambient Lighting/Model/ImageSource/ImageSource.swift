@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ImageSource {
+protocol ImageSource: CustomStringConvertible {
     func getImage() -> CGImage
 }

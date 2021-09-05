@@ -9,6 +9,7 @@ import Foundation
 
 struct MultiLightOutput: LightOutput {
     
+    var description: String = "Multi Light Output"
     var outputs: [LightOutput]
     
     func outputColors(colors: [CGColor]) {

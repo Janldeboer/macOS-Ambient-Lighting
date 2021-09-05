@@ -10,6 +10,8 @@ import ORSSerial
 
 struct SerialLightOutput: CorrectedLightOutput {
     
+    var description: String = "Screen Capture"
+    
     var controller: SerialController = SerialController()
     var correction: ColorCorrection? = nil
     

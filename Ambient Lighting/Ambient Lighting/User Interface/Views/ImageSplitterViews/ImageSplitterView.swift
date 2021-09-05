@@ -25,10 +25,15 @@ struct ImageSplitterView: View {
                     }.padding()
                 } else {
                     HStack {
+                        Text(splitter!.description)
+                            .padding()
+                            .font(.title)
                         Spacer()
-                        Button("Delete") {
-                            splitter = nil
-                        }.padding()
+                        Image("Delete")
+                            .onTapGesture {
+                                splitter = nil
+                            }
+                            .padding()
                     }
                     if splitter is GridSplitter {
                         let bind = Binding<GridSplitter>(get: { splitter as! GridSplitter}, set: { splitter = $0})

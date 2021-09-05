@@ -14,6 +14,7 @@ struct SaturationCorrectionView: View {
     var body: some View {
         VStack {
             Text("Saturation Correction")
+                .font(.title2)
             HStack {
                 Text("Saturation \(correction.gamma)")
                 Slider(value: $correction.gamma, in: ClosedRange(uncheckedBounds: (0,1)))

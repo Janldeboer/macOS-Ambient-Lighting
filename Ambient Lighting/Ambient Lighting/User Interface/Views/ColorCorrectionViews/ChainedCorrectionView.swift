@@ -18,17 +18,24 @@ struct ChainedCorrectionView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Text("Color Corrections")
+                    .font(.title)
+                Spacer()
+            }
             ForEach($correction.correctors, id:\.id) { $corrector in
                 ZStack {
                     ColorCorrectionView(correction: $corrector)
                     VStack {
                         HStack {
                             Spacer()
-                            Button("Delete") {
-                                if let i = correction.correctors.firstIndex(where: {$0.isEqual(to: corrector)}) {
-                                    correction.correctors.remove(at: i)
+                            Image("Delete")
+                                .onTapGesture {
+                                    if let i = correction.correctors.firstIndex(where: {$0.isEqual(to: corrector)}) {
+                                        correction.correctors.remove(at: i)
+                                    }
                                 }
-                            }.padding()
+                                .padding()
                         }
                         Spacer()
                     }

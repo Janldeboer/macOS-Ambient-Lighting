@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3D12D33B26DFB09E00CCEE09 /* SaturationCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */; };
+		3D152E4B26E50FB7003F9619 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D152E4A26E50FB7003F9619 /* PythonKit */; };
 		3D5A6D9226C0617D001F9740 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */; };
 		3D715A6E26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6D26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift */; };
 		3D715A7026E4DEFE001D93B1 /* ChainedCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6F26E4DEFE001D93B1 /* ChainedCorrectionView.swift */; };
@@ -144,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */,
+				3D152E4B26E50FB7003F9619 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +433,9 @@
 			dependencies = (
 			);
 			name = "Ambient Lighting";
+			packageProductDependencies = (
+				3D152E4A26E50FB7003F9619 /* PythonKit */,
+			);
 			productName = "Ambient Lighting";
 			productReference = 3DE5998A260D223F00220450 /* Ambient Lighting.app */;
 			productType = "com.apple.product-type.application";
@@ -502,6 +507,9 @@
 				Base,
 			);
 			mainGroup = 3DE59981260D223F00220450;
+			packageReferences = (
+				3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 3DE5998B260D223F00220450 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -928,6 +936,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D152E4A26E50FB7003F9619 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DE59982260D223F00220450 /* Project object */;
 }

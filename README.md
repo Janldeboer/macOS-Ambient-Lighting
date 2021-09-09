@@ -17,7 +17,3 @@ The setup can be done using the GUI:
 Linear Correction and Saturation can freely be combined.
 4. Setup the Light Output: So far only Serial Output is supoorted. Port and Baud Rate can be selected an the port needs to be opened in order to start the communication. Controlling devices via URL-Request to be added soon.
 <img src="https://user-images.githubusercontent.com/44832123/132138800-97830f5e-4078-4697-b3c4-60ade24d16be.png" alt="drawing" width="300"/>
-
-# Color Correction
-
-Color correction is currently not available, but will soon be added again with GUI support.

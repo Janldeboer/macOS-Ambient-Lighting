@@ -40,7 +40,7 @@ class AmbientLightingModel: ObservableObject {
     
     var timer: Timer = Timer()
     
-    var isRunning: Bool = false {
+    @Published var isRunning: Bool = false {
         didSet {
             if isRunning {
                 timer = Timer.scheduledTimer(timeInterval: 0.04, target: self, selector: #selector(fire), userInfo: nil, repeats: true)

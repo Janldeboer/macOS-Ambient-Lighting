@@ -9,7 +9,6 @@ import Foundation
 import ORSSerial
 import SwiftUI
 import UniformTypeIdentifiers
-import PythonKit
 
 class SerialController: NSObject, ORSSerialPortDelegate {
     

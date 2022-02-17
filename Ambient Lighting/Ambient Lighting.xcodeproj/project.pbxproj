@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3D12D33B26DFB09E00CCEE09 /* SaturationCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12D33A26DFB09E00CCEE09 /* SaturationCorrectionView.swift */; };
-		3D152E4B26E50FB7003F9619 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3D152E4A26E50FB7003F9619 /* PythonKit */; };
 		3D5A6D9226C0617D001F9740 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A6D9126C0617D001F9740 /* BlackBarDetector.swift */; };
 		3D715A6E26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6D26E4DA79001D93B1 /* ChannelLinearCorrectionView.swift */; };
 		3D715A7026E4DEFE001D93B1 /* ChainedCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D715A6F26E4DEFE001D93B1 /* ChainedCorrectionView.swift */; };
@@ -20,6 +19,7 @@
 		3D79AFC226E3F82600443991 /* ScreenCaptureSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFC126E3F82600443991 /* ScreenCaptureSourceView.swift */; };
 		3D79AFC926E3FE3100443991 /* ImageSplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFC826E3FE3100443991 /* ImageSplitterView.swift */; };
 		3D79AFCB26E3FE4600443991 /* LightOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFCA26E3FE4600443991 /* LightOutputView.swift */; };
+		3D8AEBF327BEAC9F008884C3 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8AEBF227BEAC9F008884C3 /* ORSSerial */; };
 		3DCB9D0B260D768B00E2744B /* ChannelGammaCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D0A260D768B00E2744B /* ChannelGammaCorrection.swift */; };
 		3DCB9D13260E29B400E2744B /* CorrectedLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D12260E29B400E2744B /* CorrectedLightOutput.swift */; };
 		3DCB9D1B260E2D6200E2744B /* SerialLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D1A260E2D6200E2744B /* SerialLightOutput.swift */; };
@@ -49,7 +49,6 @@
 		3DE599E8260D22B600220450 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D5260D22B600220450 /* RGB.swift */; };
 		3DE599E9260D22B600220450 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599D6260D22B600220450 /* Coord.swift */; };
 		3DE599F4260D22BE00220450 /* SerialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE599F1260D22BE00220450 /* SerialController.swift */; };
-		3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE59A10260D26B200220450 /* ORSSerial.framework */; };
 		3DE59A23260D277800220450 /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A22260D277800220450 /* Examples.swift */; };
 		3DE59A48260D625300220450 /* ExampleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE59A47260D625300220450 /* ExampleCorrection.swift */; };
 /* End PBXBuildFile section */
@@ -68,20 +67,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3DE59989260D223F00220450;
 			remoteInfo = "Ambient Lighting";
-		};
-		3DE59A0F260D26B200220450 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
-			remoteInfo = ORSSerial;
-		};
-		3DE59A11260D26B200220450 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
-			remoteInfo = "ORSSerialPort Tests";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,7 +119,6 @@
 		3DE599D5260D22B600220450 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
 		3DE599D6260D22B600220450 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		3DE599F1260D22BE00220450 /* SerialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialController.swift; sourceTree = "<group>"; };
-		3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 		3DE59A22260D277800220450 /* Examples.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
 		3DE59A47260D625300220450 /* ExampleCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCorrection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,8 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE59A19260D26DC00220450 /* ORSSerial.framework in Frameworks */,
-				3D152E4B26E50FB7003F9619 /* PythonKit in Frameworks */,
+				3D8AEBF327BEAC9F008884C3 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +230,6 @@
 		3DE59981260D223F00220450 = {
 			isa = PBXGroup;
 			children = (
-				3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */,
 				3DE5998C260D223F00220450 /* Ambient Lighting */,
 				3DE5999F260D224000220450 /* Ambient LightingTests */,
 				3DE599AA260D224000220450 /* Ambient LightingUITests */,
@@ -401,15 +383,6 @@
 			path = "Ambient Lighting/User Interface";
 			sourceTree = SOURCE_ROOT;
 		};
-		3DE59A0B260D26B200220450 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3DE59A10260D26B200220450 /* ORSSerial.framework */,
-				3DE59A12260D26B200220450 /* ORSSerialPort Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3DE59A18260D26DC00220450 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +407,7 @@
 			);
 			name = "Ambient Lighting";
 			packageProductDependencies = (
-				3D152E4A26E50FB7003F9619 /* PythonKit */,
+				3D8AEBF227BEAC9F008884C3 /* ORSSerial */,
 			);
 			productName = "Ambient Lighting";
 			productReference = 3DE5998A260D223F00220450 /* Ambient Lighting.app */;
@@ -508,16 +481,10 @@
 			);
 			mainGroup = 3DE59981260D223F00220450;
 			packageReferences = (
-				3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */,
+				3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
 			);
 			productRefGroup = 3DE5998B260D223F00220450 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3DE59A0B260D26B200220450 /* Products */;
-					ProjectRef = 3DE59A0A260D26B200220450 /* ORSSerialPort.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3DE59989260D223F00220450 /* Ambient Lighting */,
@@ -526,23 +493,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3DE59A10260D26B200220450 /* ORSSerial.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ORSSerial.framework;
-			remoteRef = 3DE59A0F260D26B200220450 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3DE59A12260D26B200220450 /* ORSSerialPort Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ORSSerialPort Tests.xctest";
-			remoteRef = 3DE59A11260D26B200220450 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3DE59988260D223F00220450 /* Resources */ = {
@@ -938,21 +888,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+		3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
+				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3D152E4A26E50FB7003F9619 /* PythonKit */ = {
+		3D8AEBF227BEAC9F008884C3 /* ORSSerial */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3D152E4926E50FB7003F9619 /* XCRemoteSwiftPackageReference "PythonKit" */;
-			productName = PythonKit;
+			package = 3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

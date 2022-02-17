@@ -10,10 +10,10 @@ import ORSSerial
 
 struct SerialSettingsView: View {
     
-    @Binding var output: SerialLightOutput
+    @StateObject var controller: SerialController
     @State var baudRate: Int = 230400 {
         didSet {
-            output.controller.serialPort?.baudRate = NSNumber(value: baudRate)
+            controller.serialPort?.baudRate = NSNumber(value: baudRate)
         }
     }
     @State var port: String = "none" {
@@ -22,13 +22,11 @@ struct SerialSettingsView: View {
         }
     }
     
-    let controller = SerialController()
-    
     
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
             HStack {
-                Picker(selection: $output.controller.serialPort, label: Text("Port")) {
+                Picker(selection: $controller.serialPort, label: Text("Port")) {
                     ForEach(ORSSerialPortManager.shared().availablePorts, id: \.self) { port in
                         Text(port.name).tag(port as ORSSerialPort?)
                     }
@@ -40,8 +38,8 @@ struct SerialSettingsView: View {
                     }
                 }
             }
-            Button((output.controller.serialPort?.isOpen ?? false) ? "Close Port" : "Open Port", action: {
-                if let port = output.controller.serialPort {
+            Button(controller.isPortOpen ? "Close Port" : "Open Port", action: {
+                if let port = controller.serialPort {
                     port.isOpen ? { _ = port.close() }() : port.open()
                 }
             }).padding(.top)
@@ -49,13 +47,13 @@ struct SerialSettingsView: View {
     }
     
     func setPort(path: String) {
-        output.controller.selectPort(withPath: path)
+        controller.selectPort(withPath: path)
     }
 }
 
  struct SettingsView_Previews: PreviewProvider {
      static var previews: some View {
-         SerialSettingsView(output: .constant(SerialLightOutput()))
+         SerialSettingsView(controller: SerialController())
      }
  }
  

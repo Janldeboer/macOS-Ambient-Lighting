@@ -10,7 +10,8 @@ import ORSSerial
 import SwiftUI
 import UniformTypeIdentifiers
 
-class SerialController: NSObject, ORSSerialPortDelegate {
+class SerialController: NSObject, ORSSerialPortDelegate, ObservableObject {
+    @Published var isPortOpen = false
     
     @objc let serialPortManager = ORSSerialPortManager.shared()
     @objc let availableBaudRates = [300, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600, 115200, 230400]
@@ -22,6 +23,7 @@ class SerialController: NSObject, ORSSerialPortDelegate {
             serialPort?.delegate = self
         }
     }
+    
     
     func selectPort(withPath path: String) {
         for port in serialPortManager.availablePorts {
@@ -35,6 +37,7 @@ class SerialController: NSObject, ORSSerialPortDelegate {
     func openPort() {
         if let port = self.serialPort {
             port.open()
+            isPortOpen = true
             print("Port opened")
         }
     }
@@ -43,6 +46,7 @@ class SerialController: NSObject, ORSSerialPortDelegate {
         if let port = self.serialPort {
             if (port.isOpen) {
                 port.close()
+                isPortOpen = false
             }
         }
     }
@@ -63,7 +67,7 @@ class SerialController: NSObject, ORSSerialPortDelegate {
         let text = input
         if(serialPort?.isOpen == false) {
             openOrClosePort()
-            print("Port wasn't opened")
+            print("Port wasn't open")
         }
         if let data = text.data(using: String.Encoding.utf8) {
             return self.serialPort?.send(data) ?? false
@@ -85,10 +89,12 @@ class SerialController: NSObject, ORSSerialPortDelegate {
     
     func serialPortWasOpened(_ serialPort: ORSSerialPort) {
         print("Port Opened")
+        isPortOpen = true
     }
     
     func serialPortWasClosed(_ serialPort: ORSSerialPort) {
         print("Port Closed")
+        isPortOpen = false
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didReceive data: Data) {
@@ -97,6 +103,7 @@ class SerialController: NSObject, ORSSerialPortDelegate {
     
     func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {
         self.serialPort = nil
+        isPortOpen = false
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {

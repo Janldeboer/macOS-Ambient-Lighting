@@ -18,21 +18,16 @@ struct LightOutputView: View {
                 .foregroundColor(.init(red: 0.3, green: 0.3, blue: 0.3))
             VStack (spacing: 0) {
                 
-                if output == nil {
-                    Button("Add Serial Output") {
-                        output = SerialLightOutput()
-                    }.padding()
-                } else {
+                if let o = output {
                     DisclosureGroup(content: {
-                        if output is SerialLightOutput {
-                            let bind = Binding<SerialLightOutput>(get: { output as! SerialLightOutput}, set: { output = $0})
-                            SerialSettingsView(output: bind)
+                        if let slo = o as? SerialLightOutput {
+                            SerialSettingsView(controller: slo.controller)
                                 .padding([.top])
                         }
                         
                     }, label: {
                         HStack {
-                            Text(output!.description)
+                            Text(o.description)
                                 .font(.title)
                                 .padding(.leading)
                             Spacer()
@@ -43,6 +38,10 @@ struct LightOutputView: View {
                         }
                     })
                         .padding()
+                } else {
+                    Button("Add Serial Output") {
+                        output = SerialLightOutput()
+                    }.padding()
                 }
             }
         }

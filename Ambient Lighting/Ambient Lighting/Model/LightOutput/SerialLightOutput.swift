@@ -8,12 +8,12 @@
 import Foundation
 import ORSSerial
 
-struct SerialLightOutput: CorrectedLightOutput {
+class SerialLightOutput: CorrectedLightOutput, ObservableObject {
     
     var description: String = "Serial Output"
     
-    var controller: SerialController = SerialController()
-    var correction: ColorCorrection? = nil
+    @Published var controller: SerialController = SerialController()
+    @Published var correction: ColorCorrection? = nil
     
     func outputCorrectedColors(colors: [CGColor]) {
         for i in 0 ..< colors.count {

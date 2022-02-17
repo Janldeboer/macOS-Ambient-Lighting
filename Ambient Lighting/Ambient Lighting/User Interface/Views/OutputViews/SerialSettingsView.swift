@@ -11,7 +11,7 @@ import ORSSerial
 struct SerialSettingsView: View {
     
     @Binding var output: SerialLightOutput
-    @State var baudRate: Int = 1 {
+    @State var baudRate: Int = 230400 {
         didSet {
             output.controller.serialPort?.baudRate = NSNumber(value: baudRate)
         }

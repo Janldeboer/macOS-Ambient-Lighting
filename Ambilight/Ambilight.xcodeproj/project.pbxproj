@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC127D7BCD100FDE89D /* ControlView.swift */; };
+		3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */; };
+		3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */; };
 		3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */; };
 		3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8927D7B8E600A17EDF /* ContentView.swift */; };
 		3D837F8C27D7B8E700A17EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D837F8B27D7B8E700A17EDF /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D371EC127D7BCD100FDE89D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortView.swift; sourceTree = "<group>"; };
+		3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortViewModel.swift; sourceTree = "<group>"; };
 		3D837F8427D7B8E600A17EDF /* Ambilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightApp.swift; sourceTree = "<group>"; };
 		3D837F8927D7B8E600A17EDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -167,6 +173,8 @@
 		3D837FB827D7B98D00A17EDF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D371EC127D7BCD100FDE89D /* ControlView.swift */,
+				3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 		3D837FB927D7B99800A17EDF /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -351,6 +360,9 @@
 				3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */,
 				3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */,
 				3D837F9427D7B8E700A17EDF /* Ambilight.xcdatamodeld in Sources */,
+				3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */,
+				3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */,
+				3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

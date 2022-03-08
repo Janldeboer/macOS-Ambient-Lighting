@@ -10,22 +10,21 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    
     var body: some View {
-        VStack {
-            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-                Text("Control").tabItem { Text("Control") }.tag(1)
-                Text("Serial Port").tabItem { Text("Serial Port") }.tag(2)
-                Text("Color Correction").tabItem { Text("Color Correction") }.tag(3)
-            }
-        }
+        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            ControlView().tabItem { Text("Control") }.tag(1).padding()
+            SerialPortView().tabItem { Text("Serial Port") }.tag(2).padding()
+            Text("Color Correction").tabItem { Text("Color Correction") }.tag(3).padding()
+        }.padding()
+        
     }
-
+    
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -33,7 +32,7 @@ struct ContentView: View {
             saveContext()
         }
     }
-
+    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)

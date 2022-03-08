@@ -18,13 +18,11 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Spacer()
-            HStack {
-                Spacer()
-                Text("Welcome to Ambilight for macOS v2!")
-                Spacer()
+            TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+                Text("Control").tabItem { Text("Control") }.tag(1)
+                Text("Serial Port").tabItem { Text("Serial Port") }.tag(2)
+                Text("Color Correction").tabItem { Text("Color Correction") }.tag(3)
             }
-            Spacer()
         }
     }
 

@@ -20,9 +20,14 @@ byte blue = 0;
 
 uint8_t flag = 0;
 
+bool internalLed = false;
+
 void readSerial(void);
 
 void setup() {
+
+  pinMode(2, OUTPUT);
+  digitalWrite(2, true);
   
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS);
   FastLED.setBrightness(  BRIGHTNESS );
@@ -62,6 +67,13 @@ void readSerial() {
       if(flag == 2) {
         if(newByte == 's') {
           FastLED.show();
+          flag = 0;
+        } else if (newByte == 't'){
+          Serial.println("OK");
+          flag = 0;
+        } else if (newByte == 'i'){
+          internalLed = !internalLed;
+          digitalWrite(2, internalLed);
           flag = 0;
         } else if (newByte == 'd'){
           flag++;

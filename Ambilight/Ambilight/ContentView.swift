@@ -22,19 +22,21 @@ struct ContentView: View {
         TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
             ControlView()
                 .tabItem { Text("Control") }
-                .tag(1)
-                .padding()
-            SerialPortView()
-                .tabItem { Text("Serial Port") }
-                .tag(2)
                 .padding()
             SourceView(model: SourceViewModel(screenCapture: manager.getScreenCapture()))
                 .tabItem { Text("Source") }
-                .tag(3)
+                .padding()
+            SplitterView()
+                .tabItem { Text("Splitter") }
+                .padding()
+            Text("Reducer")
+                .tabItem { Text("Reducer") }
                 .padding()
             Text("Color Correction")
                 .tabItem { Text("Color Correction") }
-                .tag(4)
+                .padding()
+            SerialPortView()
+                .tabItem { Text("Serial Port") }
                 .padding()
         }.padding()
             .environmentObject(manager)

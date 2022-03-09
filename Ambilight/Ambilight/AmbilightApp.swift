@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct AmbilightApp: App {
     let persistenceController = PersistenceController.shared
+    
 
     var body: some Scene {
         WindowGroup {

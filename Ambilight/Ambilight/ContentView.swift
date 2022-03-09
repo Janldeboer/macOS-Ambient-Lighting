@@ -16,12 +16,28 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
     
+    let manager = AmbilightManager()
+    
     var body: some View {
         TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            ControlView().tabItem { Text("Control") }.tag(1).padding()
-            SerialPortView().tabItem { Text("Serial Port") }.tag(2).padding()
-            Text("Color Correction").tabItem { Text("Color Correction") }.tag(3).padding()
+            ControlView()
+                .tabItem { Text("Control") }
+                .tag(1)
+                .padding()
+            SerialPortView()
+                .tabItem { Text("Serial Port") }
+                .tag(2)
+                .padding()
+            SourceView(model: SourceViewModel(screenCapture: manager.getScreenCapture()))
+                .tabItem { Text("Source") }
+                .tag(3)
+                .padding()
+            Text("Color Correction")
+                .tabItem { Text("Color Correction") }
+                .tag(4)
+                .padding()
         }.padding()
+            .environmentObject(manager)
         
     }
     

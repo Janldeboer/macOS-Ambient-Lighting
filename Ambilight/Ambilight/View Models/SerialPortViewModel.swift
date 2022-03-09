@@ -9,22 +9,13 @@ import Foundation
 import ORSSerial
 
 class SerialPortViewModel: ObservableObject {
-    @Published var portName: String = ORSSerialPortManager.shared().availablePorts[0].name {
-        didSet {
-            print("Should switch port now...")
-        }
-    }
+    @Published var orsport: ORSSerialPort = ORSSerialPortManager.shared().availablePorts[0]
     
-    var orsport: ORSSerialPort = ORSSerialPortManager.shared().availablePorts[0]
-    
-    var availablePorts: [String] = ORSSerialPortManager.shared().availablePorts.map({$0.name})
+    @Published var availablePorts = ORSSerialPortManager.shared().availablePorts
     
     init() {
         orsport = ORSSerialPortManager.shared().availablePorts[0]
-        
-        
         orsport.baudRate = 230400
-        orsport.open()
         print(orsport.isOpen)
     }
     
@@ -38,6 +29,7 @@ class SerialPortViewModel: ObservableObject {
     func togglePort() {
         print("Port is \(orsport.isOpen ? "open" : "closed")")
         if orsport.isOpen {
+            print("Closing port")
             orsport.close()
         } else {
             orsport.open()

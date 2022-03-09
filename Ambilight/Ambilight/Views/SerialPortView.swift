@@ -14,9 +14,9 @@ struct SerialPortView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 0){
             HStack {
-                Picker(selection: $model.portName, label: Text("Port")) {
+                Picker(selection: $model.orsport, label: Text("Port")) {
                     ForEach(model.availablePorts, id: \.self) { port in
-                        Text(port).tag(port)
+                        Text(port.name).tag(port)
                     }
                 }
             }

@@ -33,7 +33,7 @@ void setup() {
   FastLED.setBrightness(  BRIGHTNESS );
      
   for(uint8_t i = 0; i < NUM_LEDS; i++){
-    leds[i] = CRGB(0,0,255);
+    leds[i] = CRGB(255,0,0);
   }
 
   

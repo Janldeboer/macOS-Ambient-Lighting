@@ -38,11 +38,19 @@ struct SerialSettingsView: View {
                     }
                 }
             }
-            Button(controller.isPortOpen ? "Close Port" : "Open Port", action: {
-                if let port = controller.serialPort {
-                    port.isOpen ? { _ = port.close() }() : port.open()
+            HStack {
+                if controller.isPortOpen {
+                    Button("Toggle internal LED") {
+                        print(controller.sendString(text: "lei"))
+                    }
                 }
-            }).padding(.top)
+                Spacer()
+                Button(controller.isPortOpen ? "Close Port" : "Open Port") {
+                    if let port = controller.serialPort {
+                        port.isOpen ? { _ = port.close() }() : port.open()
+                    }
+                }.padding(.top)
+            }
         }
     }
     
@@ -51,9 +59,9 @@ struct SerialSettingsView: View {
     }
 }
 
- struct SettingsView_Previews: PreviewProvider {
-     static var previews: some View {
-         SerialSettingsView(controller: SerialController())
-     }
- }
- 
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SerialSettingsView(controller: SerialController())
+    }
+}
+

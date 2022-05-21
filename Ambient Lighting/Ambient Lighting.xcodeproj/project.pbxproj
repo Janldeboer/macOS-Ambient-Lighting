@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		3D79AFC226E3F82600443991 /* ScreenCaptureSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFC126E3F82600443991 /* ScreenCaptureSourceView.swift */; };
 		3D79AFC926E3FE3100443991 /* ImageSplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFC826E3FE3100443991 /* ImageSplitterView.swift */; };
 		3D79AFCB26E3FE4600443991 /* LightOutputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79AFCA26E3FE4600443991 /* LightOutputView.swift */; };
-		3D8AEBF327BEAC9F008884C3 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3D8AEBF227BEAC9F008884C3 /* ORSSerial */; };
 		3DCB9D0B260D768B00E2744B /* ChannelGammaCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D0A260D768B00E2744B /* ChannelGammaCorrection.swift */; };
 		3DCB9D13260E29B400E2744B /* CorrectedLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D12260E29B400E2744B /* CorrectedLightOutput.swift */; };
 		3DCB9D1B260E2D6200E2744B /* SerialLightOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB9D1A260E2D6200E2744B /* SerialLightOutput.swift */; };
@@ -128,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D8AEBF327BEAC9F008884C3 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +232,6 @@
 				3DE5999F260D224000220450 /* Ambient LightingTests */,
 				3DE599AA260D224000220450 /* Ambient LightingUITests */,
 				3DE5998B260D223F00220450 /* Products */,
-				3DE59A18260D26DC00220450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,13 +380,6 @@
 			path = "Ambient Lighting/User Interface";
 			sourceTree = SOURCE_ROOT;
 		};
-		3DE59A18260D26DC00220450 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -407,7 +397,6 @@
 			);
 			name = "Ambient Lighting";
 			packageProductDependencies = (
-				3D8AEBF227BEAC9F008884C3 /* ORSSerial */,
 			);
 			productName = "Ambient Lighting";
 			productReference = 3DE5998A260D223F00220450 /* Ambient Lighting.app */;
@@ -456,7 +445,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					3DE59989260D223F00220450 = {
 						CreatedOnToolsVersion = 12.4;
@@ -481,7 +470,6 @@
 			);
 			mainGroup = 3DE59981260D223F00220450;
 			packageReferences = (
-				3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
 			);
 			productRefGroup = 3DE5998B260D223F00220450 /* Products */;
 			projectDirPath = "";
@@ -720,6 +708,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Ambient Lighting/Ambient_Lighting.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Ambient Lighting/Preview Content\"";
@@ -744,6 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Ambient Lighting/Ambient_Lighting.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Ambient Lighting/Preview Content\"";
@@ -886,25 +876,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3D8AEBF227BEAC9F008884C3 /* ORSSerial */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D8AEBF127BEAC9F008884C3 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
-			productName = ORSSerial;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DE59982260D223F00220450 /* Project object */;
 }

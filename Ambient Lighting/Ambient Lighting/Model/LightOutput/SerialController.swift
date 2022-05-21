@@ -98,7 +98,9 @@ class SerialController: NSObject, ORSSerialPortDelegate, ObservableObject {
     }
     
     func serialPort(_ serialPort: ORSSerialPort, didReceive data: Data) {
-        
+        if let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+            print(string)
+        }
     }
     
     func serialPortWasRemovedFromSystem(_ serialPort: ORSSerialPort) {

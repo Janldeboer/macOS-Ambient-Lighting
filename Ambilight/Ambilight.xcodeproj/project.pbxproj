@@ -15,8 +15,6 @@
 		3D371ED727D7C77700FDE89D /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ED627D7C77700FDE89D /* SourceViewModel.swift */; };
 		3D371F0C27D7C8CA00FDE89D /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F0B27D7C8CA00FDE89D /* ScreenCapture.swift */; };
 		3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */; };
-		3D371F1327D8C07100FDE89D /* ImageSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1127D8C07100FDE89D /* ImageSplitter.swift */; };
-		3D371F1427D8C07100FDE89D /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1227D8C07100FDE89D /* GridSplitter.swift */; };
 		3D371F1E27D8C0C600FDE89D /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1B27D8C0C600FDE89D /* Coord.swift */; };
 		3D371F1F27D8C0C600FDE89D /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1C27D8C0C600FDE89D /* HSV.swift */; };
 		3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1D27D8C0C600FDE89D /* RGB.swift */; };
@@ -28,17 +26,20 @@
 		3D371F2C27D8C16E00FDE89D /* ScalingReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F2B27D8C16E00FDE89D /* ScalingReduction.swift */; };
 		3D371F2E27D8C17300FDE89D /* ImageReduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F2D27D8C17300FDE89D /* ImageReduction.swift */; };
 		3D371F3327D8C19D00FDE89D /* SaturationCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F2F27D8C19C00FDE89D /* SaturationCorrection.swift */; };
-		3D371F3427D8C19D00FDE89D /* ChannelLinearCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3027D8C19D00FDE89D /* ChannelLinearCorrection.swift */; };
 		3D371F3527D8C19D00FDE89D /* ExampleCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3127D8C19D00FDE89D /* ExampleCorrection.swift */; };
 		3D371F3627D8C19D00FDE89D /* ColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3227D8C19D00FDE89D /* ColorCorrection.swift */; };
 		3D371F3827D8C1B900FDE89D /* Examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3727D8C1B900FDE89D /* Examples.swift */; };
-		3D371F3B27D8C22500FDE89D /* ChannelGammaCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3927D8C22500FDE89D /* ChannelGammaCorrection.swift */; };
 		3D371F3C27D8C22500FDE89D /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3A27D8C22500FDE89D /* ChainedColorCorrection.swift */; };
 		3D371F3E27D8C23D00FDE89D /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3D27D8C23D00FDE89D /* BlackBarDetector.swift */; };
-		3D371F4027D8C2AE00FDE89D /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3F27D8C2AE00FDE89D /* GridConfiguration.swift */; };
 		3D371F4227D8DE5000FDE89D /* SplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4127D8DE5000FDE89D /* SplitterView.swift */; };
 		3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4327D8DE5C00FDE89D /* SplitterViewModel.swift */; };
 		3D371F4727D8DF9F00FDE89D /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4627D8DF9F00FDE89D /* Numbers.swift */; };
+		3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4827D8FB8100FDE89D /* GridPreview.swift */; };
+		3D55712C28295C1E00F3E190 /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D55712B28295C1E00F3E190 /* GridSplitter.swift */; };
+		3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1CE27D90DB900930864 /* GridPreviewModel.swift */; };
+		3D59D1D327D9109500930864 /* ColorCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D227D9109500930864 /* ColorCorrectionView.swift */; };
+		3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */; };
+		3D59D1D827D914ED00930864 /* Scaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D727D914ED00930864 /* Scaler.swift */; };
 		3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */; };
 		3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8927D7B8E600A17EDF /* ContentView.swift */; };
 		3D837F8C27D7B8E700A17EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D837F8B27D7B8E700A17EDF /* Assets.xcassets */; };
@@ -48,7 +49,7 @@
 		3D837F9F27D7B8E700A17EDF /* AmbilightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F9E27D7B8E700A17EDF /* AmbilightTests.swift */; };
 		3D837FA927D7B8E700A17EDF /* AmbilightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837FA827D7B8E700A17EDF /* AmbilightUITests.swift */; };
 		3D837FAB27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */; };
-		3D837FC427D7BAB600A17EDF /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D837FC027D7BA9F00A17EDF /* ORSSerial.framework */; };
+		3DFE261427FC7EBC00661973 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3DFE261327FC7EBC00661973 /* ORSSerial */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,20 +67,6 @@
 			remoteGlobalIDString = 3D837F8327D7B8E600A17EDF;
 			remoteInfo = Ambilight;
 		};
-		3D837FBF27D7BA9F00A17EDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D837FBA27D7BA9E00A17EDF /* ORSSerialPort.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
-			remoteInfo = ORSSerial;
-		};
-		3D837FC127D7BA9F00A17EDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D837FBA27D7BA9E00A17EDF /* ORSSerialPort.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
-			remoteInfo = "ORSSerialPort Tests";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +78,6 @@
 		3D371ED627D7C77700FDE89D /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
 		3D371F0B27D7C8CA00FDE89D /* ScreenCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
 		3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightManager.swift; sourceTree = "<group>"; };
-		3D371F1127D8C07100FDE89D /* ImageSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSplitter.swift; sourceTree = "<group>"; };
-		3D371F1227D8C07100FDE89D /* GridSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
 		3D371F1B27D8C0C600FDE89D /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		3D371F1C27D8C0C600FDE89D /* HSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSV.swift; sourceTree = "<group>"; };
 		3D371F1D27D8C0C600FDE89D /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
@@ -104,17 +89,20 @@
 		3D371F2B27D8C16E00FDE89D /* ScalingReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalingReduction.swift; sourceTree = "<group>"; };
 		3D371F2D27D8C17300FDE89D /* ImageReduction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageReduction.swift; sourceTree = "<group>"; };
 		3D371F2F27D8C19C00FDE89D /* SaturationCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaturationCorrection.swift; sourceTree = "<group>"; };
-		3D371F3027D8C19D00FDE89D /* ChannelLinearCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelLinearCorrection.swift; sourceTree = "<group>"; };
 		3D371F3127D8C19D00FDE89D /* ExampleCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCorrection.swift; sourceTree = "<group>"; };
 		3D371F3227D8C19D00FDE89D /* ColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCorrection.swift; sourceTree = "<group>"; };
 		3D371F3727D8C1B900FDE89D /* Examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Examples.swift; sourceTree = "<group>"; };
-		3D371F3927D8C22500FDE89D /* ChannelGammaCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelGammaCorrection.swift; sourceTree = "<group>"; };
 		3D371F3A27D8C22500FDE89D /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
 		3D371F3D27D8C23D00FDE89D /* BlackBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
-		3D371F3F27D8C2AE00FDE89D /* GridConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridConfiguration.swift; sourceTree = "<group>"; };
 		3D371F4127D8DE5000FDE89D /* SplitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterView.swift; sourceTree = "<group>"; };
 		3D371F4327D8DE5C00FDE89D /* SplitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterViewModel.swift; sourceTree = "<group>"; };
 		3D371F4627D8DF9F00FDE89D /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		3D371F4827D8FB8100FDE89D /* GridPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPreview.swift; sourceTree = "<group>"; };
+		3D55712B28295C1E00F3E190 /* GridSplitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
+		3D59D1CE27D90DB900930864 /* GridPreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPreviewModel.swift; sourceTree = "<group>"; };
+		3D59D1D227D9109500930864 /* ColorCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCorrectionView.swift; sourceTree = "<group>"; };
+		3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelColorCorrection.swift; sourceTree = "<group>"; };
+		3D59D1D727D914ED00930864 /* Scaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaler.swift; sourceTree = "<group>"; };
 		3D837F8427D7B8E600A17EDF /* Ambilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightApp.swift; sourceTree = "<group>"; };
 		3D837F8927D7B8E600A17EDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,7 +116,6 @@
 		3D837FA427D7B8E700A17EDF /* AmbilightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmbilightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837FA827D7B8E700A17EDF /* AmbilightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightUITests.swift; sourceTree = "<group>"; };
 		3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3D837FBA27D7BA9E00A17EDF /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "../../../../Desktop/ORSSerialPort-master/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D837FC427D7BAB600A17EDF /* ORSSerial.framework in Frameworks */,
+				3DFE261427FC7EBC00661973 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,20 +144,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D371F0F27D8C05E00FDE89D /* ImageSplitter */ = {
-			isa = PBXGroup;
-			children = (
-				3D371F3F27D8C2AE00FDE89D /* GridConfiguration.swift */,
-				3D371F1227D8C07100FDE89D /* GridSplitter.swift */,
-				3D371F1127D8C07100FDE89D /* ImageSplitter.swift */,
-			);
-			name = ImageSplitter;
-			path = "../../../../../../Desktop/Ambient Lighting/Model/ImageSplitter";
-			sourceTree = "<group>";
-		};
 		3D371F1527D8C09200FDE89D /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
+				3D371F3D27D8C23D00FDE89D /* BlackBarDetector.swift */,
 				3D371F2727D8C0F600FDE89D /* ImageSource.swift */,
 				3D371F0B27D7C8CA00FDE89D /* ScreenCapture.swift */,
 			);
@@ -201,7 +178,6 @@
 		3D371F1927D8C0A900FDE89D /* ImageReduction */ = {
 			isa = PBXGroup;
 			children = (
-				3D371F3D27D8C23D00FDE89D /* BlackBarDetector.swift */,
 				3D371F2D27D8C17300FDE89D /* ImageReduction.swift */,
 				3D371F2B27D8C16E00FDE89D /* ScalingReduction.swift */,
 			);
@@ -212,11 +188,11 @@
 			isa = PBXGroup;
 			children = (
 				3D371F3A27D8C22500FDE89D /* ChainedColorCorrection.swift */,
-				3D371F3927D8C22500FDE89D /* ChannelGammaCorrection.swift */,
-				3D371F3027D8C19D00FDE89D /* ChannelLinearCorrection.swift */,
 				3D371F3227D8C19D00FDE89D /* ColorCorrection.swift */,
 				3D371F3127D8C19D00FDE89D /* ExampleCorrection.swift */,
 				3D371F2F27D8C19C00FDE89D /* SaturationCorrection.swift */,
+				3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */,
+				3D59D1D727D914ED00930864 /* Scaler.swift */,
 			);
 			path = ColorCorrection;
 			sourceTree = "<group>";
@@ -229,10 +205,16 @@
 			path = "Utility & Extensions";
 			sourceTree = "<group>";
 		};
+		3D55712A28295BF900F3E190 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		3D837F7B27D7B8E600A17EDF = {
 			isa = PBXGroup;
 			children = (
-				3D837FBA27D7BA9E00A17EDF /* ORSSerialPort.xcodeproj */,
 				3D837F8627D7B8E600A17EDF /* Ambilight */,
 				3D837F9D27D7B8E700A17EDF /* AmbilightTests */,
 				3D837FA727D7B8E700A17EDF /* AmbilightUITests */,
@@ -297,14 +279,15 @@
 		3D837FB727D7B98100A17EDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3D55712A28295BF900F3E190 /* New Group */,
 				3D371F4527D8DF8C00FDE89D /* Utility & Extensions */,
 				3D371F1A27D8C0B600FDE89D /* ColorCorrection */,
 				3D371F1927D8C0A900FDE89D /* ImageReduction */,
 				3D371F1827D8C0A300FDE89D /* Supportive Structs */,
 				3D371F1727D8C09F00FDE89D /* LightOutput */,
 				3D371F1527D8C09200FDE89D /* ImageSource */,
-				3D371F0F27D8C05E00FDE89D /* ImageSplitter */,
 				3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */,
+				3D55712B28295C1E00F3E190 /* GridSplitter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +299,8 @@
 				3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */,
 				3D371ED427D7C6DF00FDE89D /* SourceView.swift */,
 				3D371F4127D8DE5000FDE89D /* SplitterView.swift */,
+				3D371F4827D8FB8100FDE89D /* GridPreview.swift */,
+				3D59D1D227D9109500930864 /* ColorCorrectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,17 +312,9 @@
 				3D371ECD27D7C62F00FDE89D /* ControlViewModel.swift */,
 				3D371ED627D7C77700FDE89D /* SourceViewModel.swift */,
 				3D371F4327D8DE5C00FDE89D /* SplitterViewModel.swift */,
+				3D59D1CE27D90DB900930864 /* GridPreviewModel.swift */,
 			);
 			path = "View Models";
-			sourceTree = "<group>";
-		};
-		3D837FBB27D7BA9E00A17EDF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3D837FC027D7BA9F00A17EDF /* ORSSerial.framework */,
-				3D837FC227D7BA9F00A17EDF /* ORSSerialPort Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3D837FC327D7BAB600A17EDF /* Frameworks */ = {
@@ -363,6 +340,9 @@
 			dependencies = (
 			);
 			name = Ambilight;
+			packageProductDependencies = (
+				3DFE261327FC7EBC00661973 /* ORSSerial */,
+			);
 			productName = Ambilight;
 			productReference = 3D837F8427D7B8E600A17EDF /* Ambilight.app */;
 			productType = "com.apple.product-type.application";
@@ -435,14 +415,11 @@
 				Base,
 			);
 			mainGroup = 3D837F7B27D7B8E600A17EDF;
+			packageReferences = (
+				3DFE261227FC7EBC00661973 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
 			productRefGroup = 3D837F8527D7B8E600A17EDF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3D837FBB27D7BA9E00A17EDF /* Products */;
-					ProjectRef = 3D837FBA27D7BA9E00A17EDF /* ORSSerialPort.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				3D837F8327D7B8E600A17EDF /* Ambilight */,
@@ -451,23 +428,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3D837FC027D7BA9F00A17EDF /* ORSSerial.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ORSSerial.framework;
-			remoteRef = 3D837FBF27D7BA9F00A17EDF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3D837FC227D7BA9F00A17EDF /* ORSSerialPort Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ORSSerialPort Tests.xctest";
-			remoteRef = 3D837FC127D7BA9F00A17EDF /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3D837F8227D7B8E600A17EDF /* Resources */ = {
@@ -501,10 +461,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */,
-				3D371F1427D8C07100FDE89D /* GridSplitter.swift in Sources */,
 				3D837F9127D7B8E700A17EDF /* Persistence.swift in Sources */,
-				3D371F4027D8C2AE00FDE89D /* GridConfiguration.swift in Sources */,
+				3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */,
 				3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */,
+				3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */,
 				3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */,
 				3D371F3527D8C19D00FDE89D /* ExampleCorrection.swift in Sources */,
 				3D371F2827D8C0F600FDE89D /* ImageSource.swift in Sources */,
@@ -513,23 +473,24 @@
 				3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */,
 				3D371F2C27D8C16E00FDE89D /* ScalingReduction.swift in Sources */,
 				3D371F2A27D8C14F00FDE89D /* CorrectedLightOutput.swift in Sources */,
+				3D55712C28295C1E00F3E190 /* GridSplitter.swift in Sources */,
 				3D371F2427D8C0D700FDE89D /* LightOutput.swift in Sources */,
-				3D371F3427D8C19D00FDE89D /* ChannelLinearCorrection.swift in Sources */,
 				3D371F4227D8DE5000FDE89D /* SplitterView.swift in Sources */,
 				3D371F2627D8C0D700FDE89D /* SerialLightOutput.swift in Sources */,
 				3D371ED527D7C6DF00FDE89D /* SourceView.swift in Sources */,
 				3D371F3327D8C19D00FDE89D /* SaturationCorrection.swift in Sources */,
 				3D371F3827D8C1B900FDE89D /* Examples.swift in Sources */,
 				3D371F3627D8C19D00FDE89D /* ColorCorrection.swift in Sources */,
+				3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */,
 				3D371F1F27D8C0C600FDE89D /* HSV.swift in Sources */,
-				3D371F1327D8C07100FDE89D /* ImageSplitter.swift in Sources */,
+				3D59D1D827D914ED00930864 /* Scaler.swift in Sources */,
 				3D371F1E27D8C0C600FDE89D /* Coord.swift in Sources */,
 				3D371F3C27D8C22500FDE89D /* ChainedColorCorrection.swift in Sources */,
 				3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */,
-				3D371F3B27D8C22500FDE89D /* ChannelGammaCorrection.swift in Sources */,
 				3D837F9427D7B8E700A17EDF /* Ambilight.xcdatamodeld in Sources */,
 				3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */,
 				3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */,
+				3D59D1D327D9109500930864 /* ColorCorrectionView.swift in Sources */,
 				3D371ED727D7C77700FDE89D /* SourceViewModel.swift in Sources */,
 				3D371ECE27D7C62F00FDE89D /* ControlViewModel.swift in Sources */,
 				3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */,
@@ -853,6 +814,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DFE261227FC7EBC00661973 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DFE261327FC7EBC00661973 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DFE261227FC7EBC00661973 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3D837F9227D7B8E700A17EDF /* Ambilight.xcdatamodeld */ = {

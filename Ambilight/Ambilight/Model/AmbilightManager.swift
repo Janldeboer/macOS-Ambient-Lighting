@@ -10,19 +10,28 @@ import SwiftUI
 
 class AmbilightManager: ObservableObject {
     
-    final let interval = 0.1
+    @Published var interval: Double = 0.04 
     
     var timer: Timer?
     
-    var source: ImageSource? = ScreenCapture()
+    var isCalculating = false
+    
+    var source: ScreenCapture? = ScreenCapture()
     var splitter: ImageSplitter? = GridSplitter()
     var reducer: ImageReduction? = ScalingReduction()
-    var corrector: ColorCorrection? = Examples.getChainedCorrection()
+    var corrector: ChainedColorCorrection = Examples.getChainedCorrection()
     var output: LightOutput? = SerialLightOutput()
     
-    @Published var image: CGImage?
-    @Published var splits: [CGImage] = []
-    @Published var colors: [CGColor] = []
+    var t0 = Date()
+    
+    var image: CGImage?
+    var splits: [CGImage] = []
+    var colors: [CGColor] = []
+    var correctedColors: [CGColor] = []
+    
+    var lastFinish: Date = Date()
+    var measurements: [Double] = []
+    @Published var measuredFPS: Int = 0
     
     @Published var isRunning: Bool = false {
         didSet {
@@ -43,23 +52,73 @@ class AmbilightManager: ObservableObject {
         }
     }
     
-    func timerFired(_ timer: Any) {
-        if let source = source {
-            image = source.getImage()
-        }
-        if let image = image, let splitter = splitter {
-            splits = splitter.splitImage(image: image)
-        }
-        if let reducer = reducer {
-            colors = reducer.reduceImages(images: splits)
-        }
-        if let corrector = corrector {
-            colors = corrector.correctColors(colors: colors)
-            print(colors.first ?? "No colors :(")
-        }
-        if let output = output {
-            output.outputColors(colors: colors)
+    func getGridSplitter() -> GridSplitter {
+        if let gs = splitter! as? GridSplitter {
+            return gs
+        } else {
+            return GridSplitter()
         }
     }
     
+    func timerFired(_ timer: Any) {
+        Task {
+            let result = await updateAsync()
+            measuredFPS = result.4
+        }
+    }
+    
+    func updateAsync() async -> (CGImage?, [CGImage], [CGColor], [CGColor], Int) {
+        guard  let source = source, let splitter = splitter, let reducer = reducer, let output = output else {
+            return (nil,[],[],[], 0)
+        }
+        
+        t0 = Date()
+        let img = source.getImage()
+        print("Get: \(t0.distance(to: Date()).millisecond)")
+        t0 = Date()
+        let calcSplits = splitter.splitImage(image: img)
+        print("Split: \(t0.distance(to: Date()).millisecond)")
+        t0 = Date()
+        let calcColors = reducer.reduceImages(images: calcSplits)
+        print("Smooth: \(t0.distance(to: Date()).millisecond)")
+        t0 = Date()
+        let calcCorrectedColors = corrector.correctColors(colors: calcColors)
+        print("Correct: \(t0.distance(to: Date()).millisecond)")
+        t0 = Date()
+        output.outputColors(colors: calcCorrectedColors)
+        print("Output: \(t0.distance(to: Date()).millisecond)")
+        measurements.append(Double(lastFinish.distance(to: Date()).millisecond))
+        let avg = measurements.average()
+        while measurements.count >= 10 {
+            measurements.removeFirst()
+        }
+        let fps = avg == 0 ? 0 : Int(1000 / avg)
+        lastFinish = Date()
+        return (img, calcSplits, calcColors, correctedColors, fps)
+    }
+    
+    func fetchImage() async -> CGImage? {
+        if let source = source {
+            return source.getImage()
+        } else {
+            return nil
+        }
+    }
+    
+}
+
+extension TimeInterval {
+    var millisecond: Int {
+        Int((self*1000).truncatingRemainder(dividingBy: 1000))
+    }
+}
+
+extension Sequence where Element: AdditiveArithmetic {
+    /// Returns the total sum of all elements in the sequence
+    func sum() -> Element { reduce(.zero, +) }
+}
+
+extension Collection where Element: BinaryFloatingPoint {
+    /// Returns the average of all elements in the array
+    func average() -> Element { isEmpty ? .zero : sum() / Element(count) }
 }

@@ -12,8 +12,6 @@ class SourceViewModel: ObservableObject {
     @Published var images: [CGDirectDisplayID : CGImage] = [:]
     @Published var imageSource: ScreenCapture
     
-    var manager: AmbilightManager = AmbilightManager()
-    
     init(screenCapture: ScreenCapture) {
         self.imageSource = screenCapture
     }

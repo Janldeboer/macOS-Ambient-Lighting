@@ -11,59 +11,49 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @State var tab = 0
     
     let manager = AmbilightManager()
     
     var body: some View {
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+        TabView(selection: $tab) {
             ControlView()
+                .tag(0)
                 .tabItem { Text("Control") }
                 .padding()
             SourceView(model: SourceViewModel(screenCapture: manager.getScreenCapture()))
+                .tag(1)
                 .tabItem { Text("Source") }
                 .padding()
-            SplitterView()
+            SplitterView(splitter: manager.getGridSplitter())
+                .tag(2)
                 .tabItem { Text("Splitter") }
                 .padding()
             Text("Reducer")
+                .tag(3)
                 .tabItem { Text("Reducer") }
                 .padding()
-            Text("Color Correction")
+            ColorCorrectionView()
+                .tag(4)
                 .tabItem { Text("Color Correction") }
                 .padding()
             SerialPortView()
+                .tag(5)
                 .tabItem { Text("Serial Port") }
                 .padding()
         }.padding()
             .environmentObject(manager)
         
     }
-    
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            saveContext()
-        }
-    }
-    
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-            saveContext()
-        }
-    }
-    
-    private func saveContext() {
+}
+
+extension NSManagedObjectContext {
+    func protecedSave() {
         do {
-            try viewContext.save()
+            try save()
         } catch {
             let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
 }

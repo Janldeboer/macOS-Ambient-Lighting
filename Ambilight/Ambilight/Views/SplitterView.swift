@@ -6,44 +6,35 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SplitterView: View {
     
-    @StateObject var model: SplitterViewModel = SplitterViewModel()
+    //@Environment(\.managedObjectContext) private var viewContext
     
-    @EnvironmentObject var manager: AmbilightManager
+    //@FetchRequest(
+    //    sortDescriptors: [],
+    //    animation: .default)
+    //private var grids: FetchedResults<Grid>
+    @StateObject var splitter: GridSplitter
     
     var body: some View {
         VStack {
-            VStack(spacing: 0) {
-                ForEach (0 ..< model.config.rows, id:\.self) { row in
-                    HStack(spacing: 0) {
-                        ForEach(0 ..< model.config.columns, id:\.self){ column in
-                            ZStack() {
-                                Rectangle()
-                                    .scaledToFit()
-                                    .foregroundColor(model.getColor(x: column, y: row, colors: manager.colors))
-                                Text(model.getText(x: column, y: row))
-                                    .foregroundColor(.black)
-                            }.frame(minWidth: 20, minHeight: 20)
-                        }
-                    }
-                }
-            }
+            GridPreview(splitter: splitter)
             HStack {
                 VStack (alignment: .leading) {
                     HStack {
                         Text("Rows: ")
                         Spacer()
-                        Stepper(value: $model.config.rows, in: ClosedRange.init(uncheckedBounds: (1,50))) {
-                            Text("\(model.config.rows)")
+                        Stepper(value: $splitter.config.rows, in: ClosedRange.init(uncheckedBounds: (1,50))) {
+                            Text("\(splitter.config.rows)")
                         }
                     }
                     HStack {
                         Text("Columns: ")
                         Spacer()
-                        Stepper(value: $model.config.columns, in: ClosedRange.init(uncheckedBounds: (1,50))) {
-                            Text("\(model.config.columns)")
+                        Stepper(value: $splitter.config.columns, in: ClosedRange.init(uncheckedBounds: (1,50))) {
+                            Text("\(splitter.config.columns)")
                         }
                     }
                 }
@@ -51,22 +42,22 @@ struct SplitterView: View {
                     HStack {
                         Text("Start: ")
                         Spacer()
-                        Stepper(value: $model.config.startOffset, in: ClosedRange.init(uncheckedBounds: (-1,1000))) {
-                            Text("\(model.config.startOffset)")
+                        Stepper(value: $splitter.config.startOffset, in: ClosedRange.init(uncheckedBounds: (-1,1000))) {
+                            Text("\(splitter.config.startOffset)")
                         }
                     }
                     HStack {
                         Text("Length: ")
                         Spacer()
-                        Stepper(value: $model.config.numberOfParts, in: ClosedRange.init(uncheckedBounds: (1,10000))) {
-                            Text("\(model.config.numberOfParts)")
+                        Stepper(value: $splitter.config.numberOfParts, in: ClosedRange.init(uncheckedBounds: (1,10000))) {
+                            Text("\(splitter.config.numberOfParts)")
                         }
                     }
                 }
             }
             HStack {
-                Toggle("Reverse", isOn: $model.config.reverse)
-                Toggle("Ignore Black Bar", isOn: $model.config.ignoreBlackBars)
+                Toggle("Reverse", isOn: $splitter.config.reverse)
+                Toggle("Ignore Black Bar", isOn: $splitter.config.ignoreBlackBars)
                 Spacer()
             }
 
@@ -77,6 +68,6 @@ struct SplitterView: View {
 
 struct SplitterView_Previews: PreviewProvider {
     static var previews: some View {
-        SplitterView()
+        SplitterView(splitter: GridSplitter())
     }
 }

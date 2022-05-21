@@ -13,8 +13,25 @@ struct ControlView: View {
     @EnvironmentObject var manager: AmbilightManager
     
     var body: some View {
-        Button(manager.isRunning ? "Stop" : "Start") {
-            manager.isRunning.toggle()
+        let fps = Binding<Double>(get: {
+            return manager.interval == 0 ? 0 : 1 / manager.interval
+        }, set: {
+            manager.interval = $0 == 0 ? 0 : 1 / $0
+        })
+        VStack {
+            GridPreview(splitter: manager.getGridSplitter(), showIndex: false)
+            Button(manager.isRunning ? "Stop" : "Start") {
+                manager.isRunning.toggle()
+            }
+            HStack {
+                Text("\(Int(fps.wrappedValue)) FPS")
+                Slider(value: fps, in: ClosedRange(uncheckedBounds: (5, 60)))
+            }
+            Spacer()
+            HStack {
+                Spacer()
+                Text("\(manager.measuredFPS) FPS")
+            }
         }
     }
 }
@@ -23,5 +40,13 @@ struct ControlView_Previews: PreviewProvider {
     static var previews: some View {
         ControlView()
             .environmentObject(AmbilightManager())
+    }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
     }
 }

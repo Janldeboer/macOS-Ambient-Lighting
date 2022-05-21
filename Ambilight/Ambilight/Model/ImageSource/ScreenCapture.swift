@@ -8,7 +8,7 @@
 import Foundation
 import Cocoa
 
-struct ScreenCapture: ImageSource {
+class ScreenCapture {
     var description: String = "Screen Capture"
     var display: CGDirectDisplayID = CGMainDisplayID()
     
@@ -31,10 +31,6 @@ struct ScreenCapture: ImageSource {
         let displayBuffer: [CGDirectDisplayID] = Array(UnsafeBufferPointer(start: activeDisplays, count: Int(displayCount)))
         
         return displayBuffer
-    }
-    
-    func getImage() -> CGImage {
-        getImage(id: nil)
     }
     
     func getImage(id: CGDirectDisplayID? = nil) -> CGImage {

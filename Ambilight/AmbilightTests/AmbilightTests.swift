@@ -9,6 +9,8 @@ import XCTest
 @testable import Ambilight
 
 class AmbilightTests: XCTestCase {
+    
+    let x: Double = 3
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,7 +31,8 @@ class AmbilightTests: XCTestCase {
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            let splitter = GridSplitter()
+            splitter.getRect(fromCoord: Coord(x: 0, y: 0), width: 10, height: 10, cutoffs: Cutoffs(xMin: 20, xMax: 100, yMin: 0, yMax: 10000))
         }
     }
 

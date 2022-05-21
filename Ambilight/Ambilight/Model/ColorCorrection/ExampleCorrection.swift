@@ -9,15 +9,15 @@ import Foundation
 
 extension Examples {
     static func getSatCorrection() -> SaturationCorrection {
-        return SaturationCorrection(gamma: 0.3)
+        return SaturationCorrection(gamma: 0.7)
     }
     
-    static func getChannelLinearCorrection() -> ChannelLinearCorrection {
-        return ChannelLinearCorrection(strength: RGB(1.0, 0.6, 0.2))
+    static func getChannelLinearCorrection() -> ChannelColorCorrection {
+        return ChannelColorCorrection(scaler: LinearScaler(), strength: RGB(1.0, 0.75, 0.5))
     }
     
-    static func getChannelGammaCorrection() -> ChannelGammaCorrection {
-        return ChannelGammaCorrection(strength: RGB(1.5, 1.5, 1.5))
+    static func getChannelGammaCorrection() -> ChannelColorCorrection {
+        return ChannelColorCorrection(scaler: GammaScaler(), strength: RGB(1.5, 1.5, 1.5))
     }
     
     static func getChainedCorrection() -> ChainedColorCorrection {

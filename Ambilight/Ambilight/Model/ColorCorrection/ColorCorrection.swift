@@ -35,6 +35,4 @@ extension CGColor {
     }
 }
 
-protocol ChannelColorCorrection : ColorCorrection {
-    var strength: RGB { get set }
-}
+

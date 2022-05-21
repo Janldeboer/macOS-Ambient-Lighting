@@ -11,7 +11,7 @@ struct SourceView: View {
     @StateObject var model: SourceViewModel
     @EnvironmentObject var manager: AmbilightManager
     
-    var timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
+    var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
     var body: some View {
         HStack {

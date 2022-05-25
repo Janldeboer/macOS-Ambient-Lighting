@@ -10,7 +10,17 @@ import SwiftUI
 
 class AmbilightManager: ObservableObject {
     
-    @Published var interval: Double = 0.04 
+    @Published var interval: Double = 0.04  {
+        didSet {
+            if isRunning {
+                timer?.invalidate()
+                timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: timerFired(_:))
+            } else {
+                timer?.invalidate()
+                timer = nil
+            }
+        }
+    }
     
     var timer: Timer?
     

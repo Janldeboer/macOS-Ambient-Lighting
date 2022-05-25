@@ -55,6 +55,7 @@ class AmbilightManager: ObservableObject {
     func timerFired(_ timer: Any) {
         Task {
             let result = await updateAsync()
+            colors = result.2
             measuredFPS = result.4
         }
     }

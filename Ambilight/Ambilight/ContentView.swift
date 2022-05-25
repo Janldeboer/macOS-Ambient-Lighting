@@ -25,7 +25,7 @@ struct ContentView: View {
                 .tag(1)
                 .tabItem { Text("Source") }
                 .padding()
-            SplitterView(splitter: manager.getGridSplitter())
+            SplitterView(splitter: manager.splitter)
                 .tag(2)
                 .tabItem { Text("Splitter") }
                 .padding()

@@ -47,7 +47,9 @@ class SerialLightOutput: LightOutput, ObservableObject {
     
     func ledOn(num: Int, color: CGColor){
         let comp = color.components!
-        ledOn(num: num, r: Int(comp[0]*255), g: Int(comp[1]*255), b: Int(comp[2]*255))
+        if comp.count >= 3 {
+            ledOn(num: num, r: Int(comp[0]*255), g: Int(comp[1]*255), b: Int(comp[2]*255))
+        }
     }
     
     func refreshLEDs() {

@@ -9,7 +9,7 @@ import Foundation
 
 extension Examples {
     static func getSatCorrection() -> SaturationCorrection {
-        return SaturationCorrection(gamma: 0.7)
+        return SaturationCorrection(gamma: 0.3)
     }
     
     static func getChannelLinearCorrection() -> ChannelColorCorrection {

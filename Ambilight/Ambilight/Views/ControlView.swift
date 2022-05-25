@@ -19,7 +19,7 @@ struct ControlView: View {
             manager.interval = $0 == 0 ? 0 : 1 / $0
         })
         VStack {
-            GridPreview(splitter: manager.getGridSplitter(), showIndex: false)
+            GridPreview(splitter: manager.splitter, showIndex: false)
             Button(manager.isRunning ? "Stop" : "Start") {
                 manager.isRunning.toggle()
             }

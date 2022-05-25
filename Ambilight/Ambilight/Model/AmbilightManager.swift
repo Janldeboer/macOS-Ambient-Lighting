@@ -17,7 +17,7 @@ class AmbilightManager: ObservableObject {
     var isCalculating = false
     
     var source: ScreenCapture? = ScreenCapture()
-    var splitter: ImageSplitter? = GridSplitter()
+    @Published var splitter: GridSplitter = GridSplitter()
     var reducer: ImageReduction? = ScalingReduction()
     var corrector: ChainedColorCorrection = Examples.getChainedCorrection()
     var output: LightOutput? = SerialLightOutput()
@@ -25,9 +25,9 @@ class AmbilightManager: ObservableObject {
     var t0 = Date()
     
     var image: CGImage?
-    var splits: [CGImage] = []
-    var colors: [CGColor] = []
-    var correctedColors: [CGColor] = []
+    @Published var splits: [CGImage] = []
+    @Published var colors: [CGColor] = []
+    @Published var correctedColors: [CGColor] = []
     
     var lastFinish: Date = Date()
     var measurements: [Double] = []
@@ -52,14 +52,6 @@ class AmbilightManager: ObservableObject {
         }
     }
     
-    func getGridSplitter() -> GridSplitter {
-        if let gs = splitter! as? GridSplitter {
-            return gs
-        } else {
-            return GridSplitter()
-        }
-    }
-    
     func timerFired(_ timer: Any) {
         Task {
             let result = await updateAsync()
@@ -68,7 +60,7 @@ class AmbilightManager: ObservableObject {
     }
     
     func updateAsync() async -> (CGImage?, [CGImage], [CGColor], [CGColor], Int) {
-        guard  let source = source, let splitter = splitter, let reducer = reducer, let output = output else {
+        guard  let source = source, let reducer = reducer, let output = output else {
             return (nil,[],[],[], 0)
         }
         

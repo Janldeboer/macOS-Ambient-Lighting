@@ -30,7 +30,8 @@ extension CGImage {
         return context.makeImage()
     }
     
-    func pixelData() -> [UInt8]? {
+    func pixelData(_ debug: Bool = false) -> [UInt8]? {
+        var t0 = Date()
         let dataSize = self.width * self.height * 4
         var pixelData = [UInt8](repeating: 0, count: Int(dataSize))
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -41,7 +42,11 @@ extension CGImage {
                                 bytesPerRow: 4 * Int(self.width),
                                 space: colorSpace,
                                 bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
+        if debug { print("context: \(t0.distance(to: Date()).millisecond)") }
+        t0 = Date()
         context?.draw(self, in: CGRect(x: 0, y: 0, width: self.width, height: self.height))
+        if debug { print("draw: \(t0.distance(to: Date()).millisecond)") }
+        t0 = Date()
         return pixelData
     }
     

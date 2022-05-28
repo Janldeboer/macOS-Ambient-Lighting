@@ -25,12 +25,12 @@ struct ControlView: View {
             }
             HStack {
                 Text("\(Int(fps.wrappedValue)) FPS")
-                Slider(value: fps, in: ClosedRange(uncheckedBounds: (5, 60)))
+                Slider(value: fps, in: ClosedRange(uncheckedBounds: (5, 30)))
             }
             Spacer()
             HStack {
                 Spacer()
-                Text("\(manager.measuredFPS) FPS")
+                Text(manager.isRunning ? "\(manager.measuredFPS) FPS" : " ")
             }
         }
     }

@@ -10,7 +10,12 @@ import SwiftUI
 
 class AmbilightManager: ObservableObject {
     
-    @Published var interval: Double = 0.04  {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        animation: .default) private var configs: FetchedResults<Grid>
+    
+    @Published var interval: Double = 0.1  {
         didSet {
             if isRunning {
                 timer?.invalidate()
@@ -35,6 +40,8 @@ class AmbilightManager: ObservableObject {
     var t0 = Date()
     
     var image: CGImage?
+    
+    
     @Published var splits: [CGImage] = []
     @Published var colors: [CGColor] = []
     @Published var correctedColors: [CGColor] = []

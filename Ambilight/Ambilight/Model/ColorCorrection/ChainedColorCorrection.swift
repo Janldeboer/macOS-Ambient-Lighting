@@ -7,10 +7,18 @@
 
 import Foundation
 
-struct ChainedColorCorrection: ColorCorrection, Equatable {
-    
+class ChainedColorCorrection: ColorCorrection, Equatable {
+    var listener: ColorListener? = nil
     var id = UUID()
-    var correctors: [ColorCorrection]
+    var correctors: [ColorCorrection] = []
+    
+    init() {}
+    
+    init(listener: ColorListener?, correctors: [ColorCorrection]) {
+        self.listener = listener
+        self.correctors = correctors
+    }
+    
     
     func correctColor(color: CGColor) -> CGColor {
         var newColor = color

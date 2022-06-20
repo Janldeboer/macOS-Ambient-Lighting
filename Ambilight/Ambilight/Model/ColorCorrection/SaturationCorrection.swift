@@ -8,6 +8,8 @@
 import Foundation
 
 struct SaturationCorrection: ColorCorrection, Equatable {
+    var listener: ColorListener? = nil
+    
     
     var id = UUID()
     var gamma: CGFloat

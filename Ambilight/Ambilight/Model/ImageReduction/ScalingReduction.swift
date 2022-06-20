@@ -7,7 +7,17 @@
 
 import Foundation
 
-struct ScalingReduction: ImageReduction {
+class ScalingReduction: ImageReduction {
+    var listener: ColorListener? = nil
+    
+    func handleSplits(_ splits: [CGImage]) {
+        var colors: [CGColor] = []
+        for image in splits {
+            colors.append(reduceImage(image: image))
+        }
+        listener?.handleColors(colors)
+    }
+    
     func reduceImage(image: CGImage) -> CGColor {
         if let scaledImage = image.resize(width: 1, height: 1) {
             if let color = scaledImage.getFirstPixel() {

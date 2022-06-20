@@ -21,10 +21,10 @@ struct SourceView: View {
                         if let image = model.images[id] {
                             Image(decorative: image, scale: 10)
                                 .onTapGesture {
-                                    model.imageSource.display = id
+                                    model.imageSource.displayID = id
                                 }
                             if #available(macOS 12.0, *) {
-                                if id == model.imageSource.display {
+                                if id == model.imageSource.displayID {
                                     Rectangle()
                                         .foregroundStyle(.clear)
                                         .border(.green, width: 5)

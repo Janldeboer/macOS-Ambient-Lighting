@@ -7,10 +7,19 @@
 
 import Foundation
 
-struct ChannelColorCorrection : ColorCorrection {
+class ChannelColorCorrection: ColorCorrection {
+    var listener: ColorListener? = nil
+    
     var id: UUID = UUID()
-    var scaler: Scaler
-    var strength: RGB
+    var scaler: Scaler = LinearScaler()
+    var strength: RGB = RGB(1, 1, 1)
+    
+    init() {}
+    
+    init(scaler: Scaler, strength: RGB) {
+        self.scaler = scaler
+        self.strength = strength
+    }
     
     func correctColor(color: CGColor) -> CGColor {
         if let components = color.components {

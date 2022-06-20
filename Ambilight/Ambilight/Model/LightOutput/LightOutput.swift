@@ -7,6 +7,16 @@
 
 import Foundation
 
-protocol LightOutput: CustomStringConvertible {
+protocol LightOutput: CustomStringConvertible, ColorListener {
     func outputColors(colors: [CGColor])
+}
+
+protocol ColorListener {
+    func handleColors(_ colors: [CGColor])
+}
+
+extension LightOutput {
+    func handleColors(_ colors: [CGColor]) {
+        outputColors(colors: colors)
+    }
 }

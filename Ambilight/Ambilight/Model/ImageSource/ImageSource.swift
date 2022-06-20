@@ -7,6 +7,15 @@
 
 import Foundation
 
-protocol ImageSource: CustomStringConvertible {
-    func getImage() -> CGImage
+protocol ImageSource: CustomStringConvertible, PipelineStarter {
+    var listener: ImageListener?  { get set }
+    func getImage() -> CGImage?
+}
+
+extension ImageSource {
+    func startPipeline() {
+        if let image = getImage() {
+            listener?.handleImage(image)
+        }
+    }
 }

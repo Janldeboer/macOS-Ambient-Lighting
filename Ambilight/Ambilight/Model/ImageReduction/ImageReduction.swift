@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ImageReduction {
+protocol ImageReduction: SplitListener {
     func reduceImage(image: CGImage) -> CGColor
     func reduceImages(images: [CGImage]) -> [CGColor]
 }

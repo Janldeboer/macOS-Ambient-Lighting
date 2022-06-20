@@ -21,6 +21,6 @@ extension Examples {
     }
     
     static func getChainedCorrection() -> ChainedColorCorrection {
-        return ChainedColorCorrection(correctors: [getSatCorrection(), getChannelLinearCorrection()])
+        return ChainedColorCorrection(listener: nil, correctors: [getSatCorrection(), getChannelLinearCorrection()])
     }
 }

@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol ColorCorrection {
+protocol ColorCorrection: ColorListener {
+    var listener: ColorListener? { get set }
     var id: UUID { get }
     func correctColor(color: CGColor) -> CGColor
     func correctColors(colors: [CGColor]) -> [CGColor]
@@ -17,9 +18,11 @@ extension ColorCorrection {
     func isEqual(to: ColorCorrection) -> Bool {
         return self.id == to.id
     }
-}
-
-extension ColorCorrection {
+    
+    func handleColors(_ colors: [CGColor]) {
+        listener?.handleColors(correctColors(colors: colors))
+    }
+    
     func correctColors(colors: [CGColor]) -> [CGColor] {
         var newColors: [CGColor] = []
         for color in colors {

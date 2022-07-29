@@ -10,27 +10,21 @@ import SwiftUI
 struct ControlView: View {
     
     @StateObject var model: ControlViewModel = ControlViewModel()
-    @EnvironmentObject var manager: AmbilightManager
     
     var body: some View {
-        let fps = Binding<Double>(get: {
-            return manager.interval == 0 ? 0 : 1 / manager.interval
-        }, set: {
-            manager.interval = $0 == 0 ? 0 : 1 / $0
-        })
         VStack {
-            GridPreview(splitter: manager.splitter, showIndex: false)
-            Button(manager.isRunning ? "Stop" : "Start") {
-                manager.isRunning.toggle()
+            //GridPreview(splitter: manager.splitter, showIndex: false)
+            Button(model.isRunning ? "Stop" : "Start") {
+                model.isRunning.toggle()
             }
             HStack {
-                Text("\(Int(fps.wrappedValue)) FPS")
-                Slider(value: fps, in: ClosedRange(uncheckedBounds: (5, 30)))
+                Text("\(Int(model.fps)) FPS")
+                Slider(value: $model.fps, in: ClosedRange(uncheckedBounds: (5, 30)))
             }
             Spacer()
             HStack {
                 Spacer()
-                Text(manager.isRunning ? "\(manager.measuredFPS) FPS" : " ")
+                Text(model.isRunning ? "\(model.measuredFPS) FPS" : " ")
             }
         }
     }

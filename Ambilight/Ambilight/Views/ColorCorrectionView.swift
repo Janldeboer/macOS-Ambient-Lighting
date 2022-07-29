@@ -8,30 +8,10 @@
 import SwiftUI
 
 struct ColorCorrectionView: View {
-    
-    @EnvironmentObject var manager: AmbilightManager
+
     
     var body: some View {
-        List {
-            ForEach(manager.corrector.correctors.indices) { i in
-                if let c = manager.corrector.correctors[i] as? ChannelColorCorrection {
-                    let binding: Binding<ChannelColorCorrection> = Binding(get: {
-                        return c
-                    }, set: {
-                        manager.corrector.correctors[i] = $0
-                    })
-                    ChannelCorrectionView(correction: binding)
-                }
-                if let c = manager.corrector.correctors[i] as? SaturationCorrection {
-                    let binding: Binding<SaturationCorrection> = Binding(get: {
-                        return c
-                    }, set: {
-                        manager.corrector.correctors[i] = $0
-                    })
-                    SaturationCorrectionView(correction: binding)
-                }
-            }
-        }
+        Text("Todo")
     }
 }
 

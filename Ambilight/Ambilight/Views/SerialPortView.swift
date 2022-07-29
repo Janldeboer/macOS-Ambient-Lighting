@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct SerialPortView: View {
-    @EnvironmentObject var manager: AmbilightManager
     @StateObject var model: SerialPortViewModel = SerialPortViewModel()
     @State var color: Color = .orange {
         didSet {
-            manager.colors = [CGColor]( repeatElement(color.cgColor ?? CGColor.black, count: 100))
-            manager.output?.outputColors(colors: manager.colors)
             print("Check")
         }
     }
@@ -33,11 +30,7 @@ struct SerialPortView: View {
                 }
                 ColorPicker("Color", selection: $color)
                 Button("Refresh") {
-                    manager.colors = [CGColor]( repeatElement(color.cgColor ?? CGColor.black, count: 100))
-                    if let output = manager.output {
-                        output.outputColors(colors: manager.colors)
-                        print("A")
-                    }
+                    // TODO
                     print("B")
                 }
                 .foregroundColor(color)

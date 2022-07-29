@@ -10,7 +10,7 @@ import Foundation
 class ScalingReduction: ImageReduction {
     var listener: ColorListener? = nil
     
-    func handleSplits(_ splits: [CGImage]) {
+    func handle(splits: [CGImage]) {
         var colors: [CGColor] = []
         for image in splits {
             colors.append(reduceImage(image: image))

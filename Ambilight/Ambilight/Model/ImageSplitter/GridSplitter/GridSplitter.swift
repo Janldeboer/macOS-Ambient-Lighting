@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct GridSplitter: ImageSplitter {
+class GridSplitter: ObservableObject, ImageListener {
     
     var description: String = "Grid Splitter"
+    
+    var listener: SplitListener?
     
     var config = GridConfiguration()
     
@@ -19,7 +21,7 @@ struct GridSplitter: ImageSplitter {
     
     let blackBarDetector = BlackBarDetector()
     
-    func splitImage(image: CGImage) -> [CGImage] {
+    func handle(image: CGImage) {
         var images: [CGImage] = []
         
         let partWidth: Int = image.width / config.columns
@@ -33,7 +35,7 @@ struct GridSplitter: ImageSplitter {
                 images.append(cropped)
             }
         }
-        return images
+        listener?.handle(splits: images)
     }
     
     func getRect(fromCoord coord: Coord, width: Int, height: Int, cutoffs: Cutoffs?) -> CGRect {
@@ -73,20 +75,5 @@ struct GridSplitter: ImageSplitter {
 extension Comparable {
     func clamped(to limits: ClosedRange<Self>) -> Self {
         return min(max(self, limits.lowerBound), limits.upperBound)
-    }
-}
-
-extension AmbientLightingModel {
-    func getColor(x: Int, y: Int) -> Color {
-        if let s = splitter as? GridSplitter {
-            let coord = Coord(x: x, y: y)
-            if s.config.parts.contains(coord) {
-                return .blue
-            } else {
-                return .gray
-            }
-        } else {
-            return .black
-        }
     }
 }

@@ -15,7 +15,7 @@ protocol ImageSource: CustomStringConvertible, PipelineStarter {
 extension ImageSource {
     func startPipeline() {
         if let image = getImage() {
-            listener?.handleImage(image)
+            listener?.handle(image: image)
         }
     }
 }

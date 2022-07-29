@@ -10,7 +10,7 @@ import SwiftUI
 struct GridPreview: View {
     
     @StateObject var splitter: GridSplitter
-    @EnvironmentObject var manager: AmbilightManager
+    //@EnvironmentObject var manager: AmbilightManager
     @State var showIndex = true
     
     var body: some View {
@@ -21,7 +21,7 @@ struct GridPreview: View {
                         ZStack() {
                             Rectangle()
                                 .scaledToFit()
-                                .foregroundColor(splitter.getColor(x: column, y: row, colors: manager.colors))
+                                //.foregroundColor(splitter.getColor(x: column, y: row, colors: manager.colors))
                             if showIndex {
                                 Text(splitter.getText(x: column, y: row))
                                     .foregroundColor(.black)

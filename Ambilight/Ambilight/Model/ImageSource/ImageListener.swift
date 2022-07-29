@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ImageListener {
-    func handleImage(_ image: CGImage)
+    func handle(image: CGImage)
 }

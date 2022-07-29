@@ -15,19 +15,7 @@ class AmbilightManager: ObservableObject {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default) private var configs: FetchedResults<Grid>
     
-    @Published var interval: Double = 0.1  {
-        didSet {
-            if isRunning {
-                timer?.invalidate()
-                timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: timerFired(_:))
-            } else {
-                timer?.invalidate()
-                timer = nil
-            }
-        }
-    }
     
-    var timer: Timer?
     var starter: PipelineStarter? = nil
     
     
@@ -37,28 +25,6 @@ class AmbilightManager: ObservableObject {
     var lastFinish: Date = Date()
     var measurements: [Double] = []
     @Published var measuredFPS: Int = 0
-    
-    @Published var isRunning: Bool = false {
-        didSet {
-            if isRunning {
-                timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: timerFired(_:))
-            } else {
-                timer?.invalidate()
-                timer = nil
-            }
-        }
-    }
-    
-    
-    func timerFired(_ timer: Any) {
-        Task {
-            await updateAsync()
-        }
-    }
-    
-    func updateAsync() async {
-        starter?.startPipeline()
-    }
     
     
 }

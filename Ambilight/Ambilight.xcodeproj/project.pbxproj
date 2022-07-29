@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3D18ED6E284607D700D8BEA3 /* ImageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18ED6D284607D700D8BEA3 /* ImageListener.swift */; };
-		3D18ED70284608A600D8BEA3 /* SplitListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18ED6F284608A600D8BEA3 /* SplitListener.swift */; };
+		3D281B2F2894347500924D95 /* SplitListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D281B2E2894347500924D95 /* SplitListener.swift */; };
+		3D281B312894366200924D95 /* Pipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D281B302894366200924D95 /* Pipeline.swift */; };
+		3D281B332894393000924D95 /* Zeitgeber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D281B322894393000924D95 /* Zeitgeber.swift */; };
 		3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC127D7BCD100FDE89D /* ControlView.swift */; };
 		3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */; };
 		3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */; };
@@ -34,16 +36,12 @@
 		3D371F3C27D8C22500FDE89D /* ChainedColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F3A27D8C22500FDE89D /* ChainedColorCorrection.swift */; };
 		3D371F4227D8DE5000FDE89D /* SplitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4127D8DE5000FDE89D /* SplitterView.swift */; };
 		3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4327D8DE5C00FDE89D /* SplitterViewModel.swift */; };
-		3D371F4727D8DF9F00FDE89D /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4627D8DF9F00FDE89D /* Numbers.swift */; };
 		3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F4827D8FB8100FDE89D /* GridPreview.swift */; };
 		3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1CE27D90DB900930864 /* GridPreviewModel.swift */; };
 		3D59D1D327D9109500930864 /* ColorCorrectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D227D9109500930864 /* ColorCorrectionView.swift */; };
 		3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */; };
 		3D59D1D827D914ED00930864 /* Scaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D727D914ED00930864 /* Scaler.swift */; };
 		3D7A1B6F28392B4100644049 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7A1B6E28392B4100644049 /* ORSSerial */; };
-		3D7A1B7628392BFC00644049 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */; };
-		3D7A1B7728392BFC00644049 /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7328392BFC00644049 /* GridSplitter.swift */; };
-		3D7A1B7828392BFC00644049 /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7428392BFC00644049 /* GridConfiguration.swift */; };
 		3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */; };
 		3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8927D7B8E600A17EDF /* ContentView.swift */; };
 		3D837F8C27D7B8E700A17EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D837F8B27D7B8E700A17EDF /* Assets.xcassets */; };
@@ -55,6 +53,10 @@
 		3D837FAB27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */; };
 		3D8BACB0286119D0008D65D7 /* PipelineStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BACAF286119CF008D65D7 /* PipelineStarter.swift */; };
 		3D8BACB328611BC3008D65D7 /* PipelineBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8BACB228611BC3008D65D7 /* PipelineBuilder.swift */; };
+		3DA2FE8C289432B40031B563 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FE87289432B40031B563 /* BlackBarDetector.swift */; };
+		3DA2FE8D289432B40031B563 /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FE89289432B40031B563 /* GridSplitter.swift */; };
+		3DA2FE8E289432B40031B563 /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FE8A289432B40031B563 /* GridConfiguration.swift */; };
+		3DA2FE8F289432B40031B563 /* ImageSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FE8B289432B40031B563 /* ImageSplitter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +78,9 @@
 
 /* Begin PBXFileReference section */
 		3D18ED6D284607D700D8BEA3 /* ImageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListener.swift; sourceTree = "<group>"; };
-		3D18ED6F284608A600D8BEA3 /* SplitListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitListener.swift; sourceTree = "<group>"; };
+		3D281B2E2894347500924D95 /* SplitListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplitListener.swift; path = Ambilight/Model/SplitListener.swift; sourceTree = SOURCE_ROOT; };
+		3D281B302894366200924D95 /* Pipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
+		3D281B322894393000924D95 /* Zeitgeber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zeitgeber.swift; sourceTree = "<group>"; };
 		3D371EC127D7BCD100FDE89D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortView.swift; sourceTree = "<group>"; };
 		3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortViewModel.swift; sourceTree = "<group>"; };
@@ -102,15 +106,11 @@
 		3D371F3A27D8C22500FDE89D /* ChainedColorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChainedColorCorrection.swift; sourceTree = "<group>"; };
 		3D371F4127D8DE5000FDE89D /* SplitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterView.swift; sourceTree = "<group>"; };
 		3D371F4327D8DE5C00FDE89D /* SplitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitterViewModel.swift; sourceTree = "<group>"; };
-		3D371F4627D8DF9F00FDE89D /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		3D371F4827D8FB8100FDE89D /* GridPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPreview.swift; sourceTree = "<group>"; };
 		3D59D1CE27D90DB900930864 /* GridPreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPreviewModel.swift; sourceTree = "<group>"; };
 		3D59D1D227D9109500930864 /* ColorCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCorrectionView.swift; sourceTree = "<group>"; };
 		3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelColorCorrection.swift; sourceTree = "<group>"; };
 		3D59D1D727D914ED00930864 /* Scaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaler.swift; sourceTree = "<group>"; };
-		3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
-		3D7A1B7328392BFC00644049 /* GridSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
-		3D7A1B7428392BFC00644049 /* GridConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridConfiguration.swift; sourceTree = "<group>"; };
 		3D837F8427D7B8E600A17EDF /* Ambilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightApp.swift; sourceTree = "<group>"; };
 		3D837F8927D7B8E600A17EDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +126,10 @@
 		3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3D8BACAF286119CF008D65D7 /* PipelineStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineStarter.swift; sourceTree = "<group>"; };
 		3D8BACB228611BC3008D65D7 /* PipelineBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PipelineBuilder.swift; sourceTree = "<group>"; };
+		3DA2FE87289432B40031B563 /* BlackBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
+		3DA2FE89289432B40031B563 /* GridSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
+		3DA2FE8A289432B40031B563 /* GridConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridConfiguration.swift; sourceTree = "<group>"; };
+		3DA2FE8B289432B40031B563 /* ImageSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSplitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,26 +211,6 @@
 			path = ColorCorrection;
 			sourceTree = "<group>";
 		};
-		3D371F4527D8DF8C00FDE89D /* Utility & Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3D371F4627D8DF9F00FDE89D /* Numbers.swift */,
-			);
-			path = "Utility & Extensions";
-			sourceTree = "<group>";
-		};
-		3D7A1B7028392BFC00644049 /* ImageSplitter */ = {
-			isa = PBXGroup;
-			children = (
-				3D7A1B7328392BFC00644049 /* GridSplitter.swift */,
-				3D18ED6F284608A600D8BEA3 /* SplitListener.swift */,
-				3D7A1B7428392BFC00644049 /* GridConfiguration.swift */,
-				3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */,
-			);
-			name = ImageSplitter;
-			path = ../../../../../../Desktop/ImageSplitter;
-			sourceTree = "<group>";
-		};
 		3D837F7B27D7B8E600A17EDF = {
 			isa = PBXGroup;
 			children = (
@@ -294,14 +278,13 @@
 		3D837FB727D7B98100A17EDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DA2FE86289432B40031B563 /* ImageSplitter */,
 				3D371F1527D8C09200FDE89D /* ImageSource */,
-				3D7A1B7028392BFC00644049 /* ImageSplitter */,
 				3D371F1A27D8C0B600FDE89D /* ColorCorrection */,
 				3D371F1927D8C0A900FDE89D /* ImageReduction */,
 				3D371F1827D8C0A300FDE89D /* Supportive Structs */,
 				3D371F1727D8C09F00FDE89D /* LightOutput */,
 				3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */,
-				3D371F4527D8DF8C00FDE89D /* Utility & Extensions */,
 				3D8BACB128611BA4008D65D7 /* Pipeline */,
 			);
 			path = Model;
@@ -344,8 +327,30 @@
 			children = (
 				3D8BACAF286119CF008D65D7 /* PipelineStarter.swift */,
 				3D8BACB228611BC3008D65D7 /* PipelineBuilder.swift */,
+				3D281B302894366200924D95 /* Pipeline.swift */,
+				3D281B322894393000924D95 /* Zeitgeber.swift */,
 			);
 			path = Pipeline;
+			sourceTree = "<group>";
+		};
+		3DA2FE86289432B40031B563 /* ImageSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2FE87289432B40031B563 /* BlackBarDetector.swift */,
+				3DA2FE88289432B40031B563 /* GridSplitter */,
+				3DA2FE8B289432B40031B563 /* ImageSplitter.swift */,
+				3D281B2E2894347500924D95 /* SplitListener.swift */,
+			);
+			path = ImageSplitter;
+			sourceTree = "<group>";
+		};
+		3DA2FE88289432B40031B563 /* GridSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2FE89289432B40031B563 /* GridSplitter.swift */,
+				3DA2FE8A289432B40031B563 /* GridConfiguration.swift */,
+			);
+			path = GridSplitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,44 +493,46 @@
 				3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */,
 				3D837F9127D7B8E700A17EDF /* Persistence.swift in Sources */,
 				3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */,
-				3D7A1B7628392BFC00644049 /* BlackBarDetector.swift in Sources */,
 				3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */,
 				3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */,
-				3D7A1B7728392BFC00644049 /* GridSplitter.swift in Sources */,
 				3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */,
 				3D371F3527D8C19D00FDE89D /* ExampleCorrection.swift in Sources */,
 				3D371F2827D8C0F600FDE89D /* ImageSource.swift in Sources */,
-				3D371F4727D8DF9F00FDE89D /* Numbers.swift in Sources */,
 				3D371F2527D8C0D700FDE89D /* MultiLightOutput.swift in Sources */,
 				3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */,
 				3D371F2C27D8C16E00FDE89D /* ScalingReduction.swift in Sources */,
+				3DA2FE8E289432B40031B563 /* GridConfiguration.swift in Sources */,
+				3DA2FE8C289432B40031B563 /* BlackBarDetector.swift in Sources */,
 				3D371F2A27D8C14F00FDE89D /* CorrectedLightOutput.swift in Sources */,
 				3D371F2427D8C0D700FDE89D /* LightOutput.swift in Sources */,
 				3D371F4227D8DE5000FDE89D /* SplitterView.swift in Sources */,
+				3DA2FE8F289432B40031B563 /* ImageSplitter.swift in Sources */,
 				3D371F2627D8C0D700FDE89D /* SerialLightOutput.swift in Sources */,
 				3D371ED527D7C6DF00FDE89D /* SourceView.swift in Sources */,
 				3D371F3327D8C19D00FDE89D /* SaturationCorrection.swift in Sources */,
+				3D281B312894366200924D95 /* Pipeline.swift in Sources */,
 				3D371F3827D8C1B900FDE89D /* Examples.swift in Sources */,
 				3D371F3627D8C19D00FDE89D /* ColorCorrection.swift in Sources */,
 				3D8BACB328611BC3008D65D7 /* PipelineBuilder.swift in Sources */,
 				3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */,
-				3D7A1B7828392BFC00644049 /* GridConfiguration.swift in Sources */,
 				3D371F1F27D8C0C600FDE89D /* HSV.swift in Sources */,
 				3D59D1D827D914ED00930864 /* Scaler.swift in Sources */,
+				3D281B2F2894347500924D95 /* SplitListener.swift in Sources */,
 				3D371F1E27D8C0C600FDE89D /* Coord.swift in Sources */,
 				3D371F3C27D8C22500FDE89D /* ChainedColorCorrection.swift in Sources */,
 				3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */,
 				3D837F9427D7B8E700A17EDF /* Ambilight.xcdatamodeld in Sources */,
 				3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */,
-				3D18ED70284608A600D8BEA3 /* SplitListener.swift in Sources */,
 				3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */,
 				3D59D1D327D9109500930864 /* ColorCorrectionView.swift in Sources */,
 				3D371ED727D7C77700FDE89D /* SourceViewModel.swift in Sources */,
+				3DA2FE8D289432B40031B563 /* GridSplitter.swift in Sources */,
 				3D371ECE27D7C62F00FDE89D /* ControlViewModel.swift in Sources */,
 				3D8BACB0286119D0008D65D7 /* PipelineStarter.swift in Sources */,
 				3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */,
 				3D371F0C27D7C8CA00FDE89D /* ScreenCapture.swift in Sources */,
 				3D371F2E27D8C17300FDE89D /* ImageReduction.swift in Sources */,
+				3D281B332894393000924D95 /* Zeitgeber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

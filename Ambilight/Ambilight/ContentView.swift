@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @State var tab = 0
     
-    let manager = AmbilightManager()
+    let pipeline = Pipeline()
     
     var body: some View {
         TabView(selection: $tab) {
@@ -21,11 +21,11 @@ struct ContentView: View {
                 .tag(0)
                 .tabItem { Text("Control") }
                 .padding()
-            SourceView(model: SourceViewModel(screenCapture: manager.getScreenCapture()))
+            SourceView(model: SourceViewModel(screenCapture: pipeline.source))
                 .tag(1)
                 .tabItem { Text("Source") }
                 .padding()
-            SplitterView(splitter: manager.splitter)
+            SplitterView(splitter: pipeline.splitter)
                 .tag(2)
                 .tabItem { Text("Splitter") }
                 .padding()
@@ -42,7 +42,6 @@ struct ContentView: View {
                 .tabItem { Text("Serial Port") }
                 .padding()
         }.padding()
-            .environmentObject(manager)
         
     }
 }

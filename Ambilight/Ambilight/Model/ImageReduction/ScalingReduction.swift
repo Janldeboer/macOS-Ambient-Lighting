@@ -10,11 +10,14 @@ import Foundation
 class ScalingReduction: ImageReduction {
     var listener: ColorListener? = nil
     
+    var lastColors: [CGColor] = []
+    
     func handle(splits: [CGImage]) {
         var colors: [CGColor] = []
         for image in splits {
             colors.append(reduceImage(image: image))
         }
+        lastColors = colors
         listener?.handleColors(colors)
     }
     
@@ -52,10 +55,10 @@ extension CGImage {
                                 bytesPerRow: 4 * Int(self.width),
                                 space: colorSpace,
                                 bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)
-        if debug { print("context: \(t0.distance(to: Date()).millisecond)") }
+        if debug { print("context: \(t0.distance(to: Date()))") }
         t0 = Date()
         context?.draw(self, in: CGRect(x: 0, y: 0, width: self.width, height: self.height))
-        if debug { print("draw: \(t0.distance(to: Date()).millisecond)") }
+        if debug { print("draw: \(t0.distance(to: Date()))") }
         t0 = Date()
         return pixelData
     }

@@ -9,21 +9,20 @@ import SwiftUI
 
 struct GridPreview: View {
     
-    @StateObject var splitter: GridSplitter
-    //@EnvironmentObject var manager: AmbilightManager
-    @State var showIndex = true
+    @StateObject var model: GridPreviewModel
     
     var body: some View {
         VStack(spacing: 0) {
-            ForEach (0 ..< splitter.config.rows, id:\.self) { row in
+            ForEach (0 ..< model.rows, id:\.self) { row in
                 HStack(spacing: 0) {
-                    ForEach(0 ..< splitter.config.columns, id:\.self){ column in
+                    ForEach(0 ..< model.columns, id:\.self){ column in
                         ZStack() {
                             Rectangle()
+                                .frame(width: 20, height: 20)
                                 .scaledToFit()
-                                //.foregroundColor(splitter.getColor(x: column, y: row, colors: manager.colors))
-                            if showIndex {
-                                Text(splitter.getText(x: column, y: row))
+                                .foregroundColor(model.getColor(row: row, column: column))
+                            if model.showIndex {
+                                Text(model.getText(row: row, column: column))
                                     .foregroundColor(.black)
                             }
                         }.frame(minWidth: 20, minHeight: 20)
@@ -36,6 +35,6 @@ struct GridPreview: View {
 
 struct GridPreview_Previews: PreviewProvider {
     static var previews: some View {
-        GridPreview(splitter: GridSplitter())
+        GridPreview(model: GridPreviewModel(splitter: GridSplitter()))
     }
 }

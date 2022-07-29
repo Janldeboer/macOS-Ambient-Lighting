@@ -25,7 +25,7 @@ struct ContentView: View {
                 .tag(1)
                 .tabItem { Text("Source") }
                 .padding()
-            SplitterView(splitter: pipeline.splitter)
+            SplitterView(model: pipeline.splitter)
                 .tag(2)
                 .tabItem { Text("Splitter") }
                 .padding()

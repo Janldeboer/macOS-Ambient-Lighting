@@ -13,13 +13,16 @@ class GridSplitter: ObservableObject, ImageListener {
     var description: String = "Grid Splitter"
     
     var listener: SplitListener?
+
     
-    var config = GridConfiguration()
+    @Published var lastSplit: [CGImage] = []
+    
+    @Published var config = GridConfiguration()
     
     var widthCrop: CGFloat = 0
     var heightCrop: CGFloat = 0
     
-    let blackBarDetector = BlackBarDetector()
+    var blackBarDetector = BlackBarDetector()
     
     func handle(image: CGImage) {
         var images: [CGImage] = []
@@ -35,6 +38,7 @@ class GridSplitter: ObservableObject, ImageListener {
                 images.append(cropped)
             }
         }
+        lastSplit = images
         listener?.handle(splits: images)
     }
     
@@ -51,25 +55,6 @@ class GridSplitter: ObservableObject, ImageListener {
         return CGRect(x: x, y: y, width: width, height: height)
     }
     
-    func getColor(x: Int, y: Int, colors: [CGColor]) -> Color {
-        let coord = Coord(x: x, y: y)
-        if let i = config.parts.firstIndex(of: coord) {
-            if i < colors.count {
-                return Color(colors[i])
-            }
-            return .blue
-        } else {
-            return .gray
-        }
-    }
-    
-    func getText(x: Int, y: Int) -> String {
-        let coord = Coord(x: x, y: y)
-        if let i = config.parts.firstIndex(of: coord) {
-            return String(i)
-        }
-        return ""
-    }
 }
 
 extension Comparable {

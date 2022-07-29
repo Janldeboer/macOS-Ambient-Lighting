@@ -48,6 +48,5 @@ struct SerialPortView: View {
 struct SerialPortView_Previews: PreviewProvider {
     static var previews: some View {
         SerialPortView()
-            .environmentObject(AmbilightManager())
     }
 }

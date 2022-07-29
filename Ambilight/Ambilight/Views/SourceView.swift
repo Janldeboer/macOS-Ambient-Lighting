@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SourceView: View {
     @StateObject var model: SourceViewModel
-    @EnvironmentObject var manager: AmbilightManager
     
     var timer = Timer.publish(every: 0.05, on: .main, in: .common).autoconnect()
     
@@ -47,6 +46,5 @@ struct SourceView: View {
 struct SourceView_Previews: PreviewProvider {
     static var previews: some View {
         SourceView(model: SourceViewModel(screenCapture: ScreenCapture()))
-            .environmentObject(AmbilightManager())
     }
 }

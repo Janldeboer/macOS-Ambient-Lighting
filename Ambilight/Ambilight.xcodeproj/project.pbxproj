@@ -18,7 +18,6 @@
 		3D371ED527D7C6DF00FDE89D /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ED427D7C6DF00FDE89D /* SourceView.swift */; };
 		3D371ED727D7C77700FDE89D /* SourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ED627D7C77700FDE89D /* SourceViewModel.swift */; };
 		3D371F0C27D7C8CA00FDE89D /* ScreenCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F0B27D7C8CA00FDE89D /* ScreenCapture.swift */; };
-		3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */; };
 		3D371F1E27D8C0C600FDE89D /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1B27D8C0C600FDE89D /* Coord.swift */; };
 		3D371F1F27D8C0C600FDE89D /* HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1C27D8C0C600FDE89D /* HSV.swift */; };
 		3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371F1D27D8C0C600FDE89D /* RGB.swift */; };
@@ -88,7 +87,6 @@
 		3D371ED427D7C6DF00FDE89D /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
 		3D371ED627D7C77700FDE89D /* SourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewModel.swift; sourceTree = "<group>"; };
 		3D371F0B27D7C8CA00FDE89D /* ScreenCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapture.swift; sourceTree = "<group>"; };
-		3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightManager.swift; sourceTree = "<group>"; };
 		3D371F1B27D8C0C600FDE89D /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		3D371F1C27D8C0C600FDE89D /* HSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSV.swift; sourceTree = "<group>"; };
 		3D371F1D27D8C0C600FDE89D /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
@@ -235,8 +233,8 @@
 		3D837F8627D7B8E600A17EDF /* Ambilight */ = {
 			isa = PBXGroup;
 			children = (
-				3D837FB927D7B99800A17EDF /* View Models */,
 				3D837FB827D7B98D00A17EDF /* Views */,
+				3D837FB927D7B99800A17EDF /* View Models */,
 				3D837FB727D7B98100A17EDF /* Model */,
 				3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */,
 				3D837F8927D7B8E600A17EDF /* ContentView.swift */,
@@ -284,7 +282,6 @@
 				3D371F1927D8C0A900FDE89D /* ImageReduction */,
 				3D371F1827D8C0A300FDE89D /* Supportive Structs */,
 				3D371F1727D8C09F00FDE89D /* LightOutput */,
-				3D371F0D27D7E49900FDE89D /* AmbilightManager.swift */,
 				3D8BACB128611BA4008D65D7 /* Pipeline */,
 			);
 			path = Model;
@@ -493,7 +490,6 @@
 				3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */,
 				3D837F9127D7B8E700A17EDF /* Persistence.swift in Sources */,
 				3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */,
-				3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */,
 				3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */,
 				3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */,
 				3D371F3527D8C19D00FDE89D /* ExampleCorrection.swift in Sources */,

@@ -8,9 +8,9 @@
 import Foundation
 
 class GridConfiguration: ObservableObject, Equatable {
-    @Published var rows: Int = 9
-    @Published var columns: Int = 16
-    @Published var numberOfParts: Int = 10 {
+    @Published var rows: Int = 12
+    @Published var columns: Int = 21
+    @Published var numberOfParts: Int = 59 {
         didSet {
             if numberOfParts > numberOfPossibleParts {
                 numberOfParts = numberOfPossibleParts
@@ -20,7 +20,7 @@ class GridConfiguration: ObservableObject, Equatable {
             }
         }
     }
-    @Published var startOffset: Int = 0 {
+    @Published var startOffset: Int = 43 {
         didSet {
             if startOffset < 0 {
                 startOffset = startOffset + numberOfPossibleParts
@@ -30,8 +30,8 @@ class GridConfiguration: ObservableObject, Equatable {
             }
         }
     }
-    @Published var reverse: Bool = false
-    @Published var ignoreBlackBars: Bool = true
+    var reverse: Bool = true
+    var ignoreBlackBars: Bool = false
     
     var numberOfPossibleParts: Int {
         return 2 * (rows + columns) - 4
@@ -54,9 +54,6 @@ class GridConfiguration: ObservableObject, Equatable {
     }
     
     init() {
-        self.rows = 9
-        self.columns = 16
-        self.numberOfParts = numberOfPossibleParts
     }
     
     init(rows: Int, columns: Int) {
@@ -108,4 +105,20 @@ class GridConfiguration: ObservableObject, Equatable {
         }
     }
     
+}
+
+extension GridConfiguration {
+    
+    func partExists(row: Int, column: Int) -> Bool {
+        return getIndex(row: row, column: column) != -1
+    }
+    
+    
+    func getIndex(row: Int, column: Int) -> Int {
+        let coord = Coord(x: column, y: row)
+        if let i = parts.firstIndex(of: coord) {
+            return i
+        }
+        return -1
+    }
 }

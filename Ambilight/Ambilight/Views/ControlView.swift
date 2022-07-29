@@ -9,22 +9,22 @@ import SwiftUI
 
 struct ControlView: View {
     
-    @StateObject var model: ControlViewModel = ControlViewModel()
+    @StateObject var zeitgeber: Zeitgeber
     
     var body: some View {
         VStack {
             //GridPreview(splitter: manager.splitter, showIndex: false)
-            Button(model.isRunning ? "Stop" : "Start") {
-                model.isRunning.toggle()
+            Button(zeitgeber.isRunning ? "Stop" : "Start") {
+                zeitgeber.isRunning.toggle()
             }
             HStack {
-                Text("\(Int(model.fps)) FPS")
-                Slider(value: $model.fps, in: ClosedRange(uncheckedBounds: (5, 30)))
+                Text("\(Int(zeitgeber.fps)) FPS")
+                Slider(value: $zeitgeber.fps, in: ClosedRange(uncheckedBounds: (5, 30)))
             }
             Spacer()
             HStack {
                 Spacer()
-                Text(model.isRunning ? "\(model.measuredFPS) FPS" : " ")
+                Text(zeitgeber.isRunning ? "\(zeitgeber.measuredFPS) FPS" : " ")
             }
         }
     }
@@ -32,8 +32,7 @@ struct ControlView: View {
 
 struct ControlView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlView()
-            .environmentObject(AmbilightManager())
+        ControlView(zeitgeber: Zeitgeber())
     }
 }
 

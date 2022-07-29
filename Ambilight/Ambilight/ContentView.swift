@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $tab) {
-            ControlView()
+            ControlView(zeitgeber: pipeline.zeitgeber)
                 .tag(0)
                 .tabItem { Text("Control") }
                 .padding()

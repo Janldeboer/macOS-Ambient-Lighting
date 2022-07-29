@@ -12,6 +12,9 @@ class Zeitgeber: ObservableObject {
     var timer: Timer?
     var starter: PipelineStarter? = nil
     
+    @Published var fps: Double = 15
+    
+    @Published var measuredFPS: Double = 15
     
     @Published var interval: Double = 0.1  {
         didSet {

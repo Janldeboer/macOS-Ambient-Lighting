@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D26898D2889E059002EB015 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3D26898C2889E059002EB015 /* ORSSerial */; };
+		3D2689942889E102002EB015 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D26898F2889E102002EB015 /* BlackBarDetector.swift */; };
+		3D2689952889E102002EB015 /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2689912889E102002EB015 /* GridSplitter.swift */; };
+		3D2689972889E102002EB015 /* ImageSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2689932889E102002EB015 /* ImageSplitter.swift */; };
 		3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC127D7BCD100FDE89D /* ControlView.swift */; };
 		3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */; };
 		3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */; };
@@ -39,9 +43,6 @@
 		3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */; };
 		3D59D1D827D914ED00930864 /* Scaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59D1D727D914ED00930864 /* Scaler.swift */; };
 		3D7A1B6F28392B4100644049 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7A1B6E28392B4100644049 /* ORSSerial */; };
-		3D7A1B7628392BFC00644049 /* BlackBarDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */; };
-		3D7A1B7728392BFC00644049 /* GridSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7328392BFC00644049 /* GridSplitter.swift */; };
-		3D7A1B7828392BFC00644049 /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7A1B7428392BFC00644049 /* GridConfiguration.swift */; };
 		3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */; };
 		3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F8927D7B8E600A17EDF /* ContentView.swift */; };
 		3D837F8C27D7B8E700A17EDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D837F8B27D7B8E700A17EDF /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		3D837F9F27D7B8E700A17EDF /* AmbilightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837F9E27D7B8E700A17EDF /* AmbilightTests.swift */; };
 		3D837FA927D7B8E700A17EDF /* AmbilightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837FA827D7B8E700A17EDF /* AmbilightUITests.swift */; };
 		3D837FAB27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */; };
+		3DA2FE852894320E0031B563 /* GridConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA2FE842894320E0031B563 /* GridConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D26898F2889E102002EB015 /* BlackBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
+		3D2689912889E102002EB015 /* GridSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
+		3D2689932889E102002EB015 /* ImageSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSplitter.swift; sourceTree = "<group>"; };
 		3D371EC127D7BCD100FDE89D /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		3D371EC327D7BCDB00FDE89D /* SerialPortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortView.swift; sourceTree = "<group>"; };
 		3D371ECA27D7BDD900FDE89D /* SerialPortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialPortViewModel.swift; sourceTree = "<group>"; };
@@ -102,9 +107,6 @@
 		3D59D1D227D9109500930864 /* ColorCorrectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCorrectionView.swift; sourceTree = "<group>"; };
 		3D59D1D527D914B700930864 /* ChannelColorCorrection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelColorCorrection.swift; sourceTree = "<group>"; };
 		3D59D1D727D914ED00930864 /* Scaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scaler.swift; sourceTree = "<group>"; };
-		3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackBarDetector.swift; sourceTree = "<group>"; };
-		3D7A1B7328392BFC00644049 /* GridSplitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSplitter.swift; sourceTree = "<group>"; };
-		3D7A1B7428392BFC00644049 /* GridConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridConfiguration.swift; sourceTree = "<group>"; };
 		3D837F8427D7B8E600A17EDF /* Ambilight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambilight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837F8727D7B8E600A17EDF /* AmbilightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightApp.swift; sourceTree = "<group>"; };
 		3D837F8927D7B8E600A17EDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		3D837FA427D7B8E700A17EDF /* AmbilightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmbilightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D837FA827D7B8E700A17EDF /* AmbilightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightUITests.swift; sourceTree = "<group>"; };
 		3D837FAA27D7B8E700A17EDF /* AmbilightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmbilightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3DA2FE842894320E0031B563 /* GridConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D7A1B6F28392B4100644049 /* ORSSerial in Frameworks */,
+				3D26898D2889E059002EB015 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D26898E2889E102002EB015 /* ImageSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3D26898F2889E102002EB015 /* BlackBarDetector.swift */,
+				3D2689902889E102002EB015 /* GridSplitter */,
+				3D2689932889E102002EB015 /* ImageSplitter.swift */,
+			);
+			path = ImageSplitter;
+			sourceTree = "<group>";
+		};
+		3D2689902889E102002EB015 /* GridSplitter */ = {
+			isa = PBXGroup;
+			children = (
+				3DA2FE842894320E0031B563 /* GridConfiguration.swift */,
+				3D2689912889E102002EB015 /* GridSplitter.swift */,
+			);
+			path = GridSplitter;
+			sourceTree = "<group>";
+		};
 		3D371F1527D8C09200FDE89D /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,17 +227,6 @@
 				3D371F4627D8DF9F00FDE89D /* Numbers.swift */,
 			);
 			path = "Utility & Extensions";
-			sourceTree = "<group>";
-		};
-		3D7A1B7028392BFC00644049 /* ImageSplitter */ = {
-			isa = PBXGroup;
-			children = (
-				3D7A1B7328392BFC00644049 /* GridSplitter.swift */,
-				3D7A1B7428392BFC00644049 /* GridConfiguration.swift */,
-				3D7A1B7128392BFC00644049 /* BlackBarDetector.swift */,
-			);
-			name = ImageSplitter;
-			path = ../../../../../../Desktop/ImageSplitter;
 			sourceTree = "<group>";
 		};
 		3D837F7B27D7B8E600A17EDF = {
@@ -284,7 +296,7 @@
 		3D837FB727D7B98100A17EDF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3D7A1B7028392BFC00644049 /* ImageSplitter */,
+				3D26898E2889E102002EB015 /* ImageSplitter */,
 				3D371F4527D8DF8C00FDE89D /* Utility & Extensions */,
 				3D371F1A27D8C0B600FDE89D /* ColorCorrection */,
 				3D371F1927D8C0A900FDE89D /* ImageReduction */,
@@ -346,6 +358,7 @@
 			name = Ambilight;
 			packageProductDependencies = (
 				3D7A1B6E28392B4100644049 /* ORSSerial */,
+				3D26898C2889E059002EB015 /* ORSSerial */,
 			);
 			productName = Ambilight;
 			productReference = 3D837F8427D7B8E600A17EDF /* Ambilight.app */;
@@ -421,6 +434,7 @@
 			mainGroup = 3D837F7B27D7B8E600A17EDF;
 			packageReferences = (
 				3D7A1B6D28392B4100644049 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+				3D26898B2889E059002EB015 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
 			);
 			productRefGroup = 3D837F8527D7B8E600A17EDF /* Products */;
 			projectDirPath = "";
@@ -467,19 +481,19 @@
 				3D371F2027D8C0C600FDE89D /* RGB.swift in Sources */,
 				3D837F9127D7B8E700A17EDF /* Persistence.swift in Sources */,
 				3D371F4927D8FB8100FDE89D /* GridPreview.swift in Sources */,
-				3D7A1B7628392BFC00644049 /* BlackBarDetector.swift in Sources */,
 				3D371F0E27D7E49900FDE89D /* AmbilightManager.swift in Sources */,
 				3D59D1CF27D90DB900930864 /* GridPreviewModel.swift in Sources */,
-				3D7A1B7728392BFC00644049 /* GridSplitter.swift in Sources */,
 				3D371F4427D8DE5C00FDE89D /* SplitterViewModel.swift in Sources */,
 				3D371F3527D8C19D00FDE89D /* ExampleCorrection.swift in Sources */,
 				3D371F2827D8C0F600FDE89D /* ImageSource.swift in Sources */,
 				3D371F4727D8DF9F00FDE89D /* Numbers.swift in Sources */,
 				3D371F2527D8C0D700FDE89D /* MultiLightOutput.swift in Sources */,
 				3D837F8A27D7B8E600A17EDF /* ContentView.swift in Sources */,
+				3D2689942889E102002EB015 /* BlackBarDetector.swift in Sources */,
 				3D371F2C27D8C16E00FDE89D /* ScalingReduction.swift in Sources */,
 				3D371F2A27D8C14F00FDE89D /* CorrectedLightOutput.swift in Sources */,
 				3D371F2427D8C0D700FDE89D /* LightOutput.swift in Sources */,
+				3D2689972889E102002EB015 /* ImageSplitter.swift in Sources */,
 				3D371F4227D8DE5000FDE89D /* SplitterView.swift in Sources */,
 				3D371F2627D8C0D700FDE89D /* SerialLightOutput.swift in Sources */,
 				3D371ED527D7C6DF00FDE89D /* SourceView.swift in Sources */,
@@ -487,7 +501,6 @@
 				3D371F3827D8C1B900FDE89D /* Examples.swift in Sources */,
 				3D371F3627D8C19D00FDE89D /* ColorCorrection.swift in Sources */,
 				3D59D1D627D914B700930864 /* ChannelColorCorrection.swift in Sources */,
-				3D7A1B7828392BFC00644049 /* GridConfiguration.swift in Sources */,
 				3D371F1F27D8C0C600FDE89D /* HSV.swift in Sources */,
 				3D59D1D827D914ED00930864 /* Scaler.swift in Sources */,
 				3D371F1E27D8C0C600FDE89D /* Coord.swift in Sources */,
@@ -495,8 +508,10 @@
 				3D837F8827D7B8E600A17EDF /* AmbilightApp.swift in Sources */,
 				3D837F9427D7B8E700A17EDF /* Ambilight.xcdatamodeld in Sources */,
 				3D371ECB27D7BDD900FDE89D /* SerialPortViewModel.swift in Sources */,
+				3DA2FE852894320E0031B563 /* GridConfiguration.swift in Sources */,
 				3D371EC227D7BCD100FDE89D /* ControlView.swift in Sources */,
 				3D59D1D327D9109500930864 /* ColorCorrectionView.swift in Sources */,
+				3D2689952889E102002EB015 /* GridSplitter.swift in Sources */,
 				3D371ED727D7C77700FDE89D /* SourceViewModel.swift in Sources */,
 				3D371ECE27D7C62F00FDE89D /* ControlViewModel.swift in Sources */,
 				3D371EC427D7BCDB00FDE89D /* SerialPortView.swift in Sources */,
@@ -821,6 +836,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3D26898B2889E059002EB015 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.0;
+			};
+		};
 		3D7A1B6D28392B4100644049 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
@@ -832,6 +855,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3D26898C2889E059002EB015 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D7A1B6D28392B4100644049 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
 		3D7A1B6E28392B4100644049 /* ORSSerial */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3D7A1B6D28392B4100644049 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;

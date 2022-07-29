@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct GridSplitter: ImageSplitter {
+class GridSplitter: ImageSplitter, ObservableObject {
     
     var description: String = "Grid Splitter"
     
